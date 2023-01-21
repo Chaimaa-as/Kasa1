@@ -2,7 +2,7 @@ import './App.scss';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import About from './component/pages/About';
 import Home from './component/pages/Home';
-import Apartments from './component/pages/Apartments';
+import SheetApartment from './component/pages/SheetApartment';
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
 
-          {/* path=* fonctionne si jamais l'url n'aboutit à aucune page existante (au lieu de mettre erreur on renvoir à l'accueil (ATTENTION voir spec ils veulent peut etre une page 404)) */}
-          <Route path='*' element={<Home/>}/>
-          <Route path='/logements' element={<Apartments/>}/>
+          {/* path=* fonctionne si jamais l'url n'aboutit à aucune page existante A REMPLACER PAR COMPOSANT ERRROERREUR 404 (au lieu de mettre erreur on renvoir à l'accueil (ATTENTION voir spec ils veulent peut etre une page 404)) */}
+          {/* <Route path='*' element={<Home/>}/> */}
+          <Route path='/logement/:id' element={<SheetApartment/>}/>
 
 
         </Routes>

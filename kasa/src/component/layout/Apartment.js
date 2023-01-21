@@ -1,11 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Apartment = (props) => {
+const Apartment = ({item}) => {
     return (
-        <div>
-            <h1>{props.item.title}</h1>
-            <div>{props.item.location}</div>
-        </div>
+        <NavLink to={`/logement/${item.id}` }>
+            <h1>{item.title}</h1>
+            <div>{item.location}</div>
+            {/* IMAGE + TITRE ( AMETTRE DANS HOME) */}
+        </NavLink>
     );
 };
 

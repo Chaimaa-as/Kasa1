@@ -3,6 +3,7 @@ import Footer from '../layout/Footer'
 import Header from '../layout/Header'
 import Navigation from '../layout/Navigation'
 import Logo from '../layout/Logo'
+import ApartmentGrid from '../layout/ApartmentGrid'
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
         <Header/>
             <h1>
                 Page d'accueil
+                
             </h1>
+            <ApartmentGrid/>
         <Footer/>
     </div>
   )
