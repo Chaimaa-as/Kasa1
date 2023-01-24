@@ -3,7 +3,7 @@ import logo from '../../assets/logo/logo.png';
 
 const Logo = () => {
     return (
-        <div className="logo">
+        <div className="header__logo">
             <img src={logo} alt="logo Kasa"/>
             
         </div>

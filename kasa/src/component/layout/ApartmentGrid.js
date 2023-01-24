@@ -1,5 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import Apartment from '../layout/Apartment';
+
+// On recupere toutes les donnees du json dans ApartmentsList
 import ApartmentsList from "../../logement.json";
 
 
@@ -49,7 +51,9 @@ const ApartmentGrid = () => {
 //ON RECUPERE LES DATA DIRECTEMENT EN IMPORTANT UN JSON
 return (
           <div className='apartementGrid'>
-    
+            {/* ApartmentsList est un tableau contenant les données de chaque appartement
+            Avec la fonction map on cré pour chaque element du tableau un composant
+            Apartment auquel on passe dans l attribut item les données d'un appartement */}
              {ApartmentsList.map(item => (
               <Apartment key={item.id} item={item}/>
                 

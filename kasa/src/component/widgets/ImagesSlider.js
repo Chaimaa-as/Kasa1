@@ -1,8 +1,14 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 
 const ImagesSlider = (props) => {
 
     const [currentImage,setCurrentImage]=useState(0)
+
+
+    useEffect(() => {
+        const timer = setTimeout(nextImage, 3000);
+        return () => clearTimeout(timer);
+      });
 
     function nextImage(){
         let img=currentImage+1
