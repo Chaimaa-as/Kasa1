@@ -3,7 +3,7 @@ import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import { useParams } from 'react-router-dom';
 import ApartmentsList from "../../logement.json";
-import DisclosePanel from '../widgets/DisclosePanel';
+import DisclosePanel from '../widgets/Collapse';
 import ImagesSlider from '../widgets/ImagesSlider';
 import Tags from '../widgets/Tags';
 

@@ -62,49 +62,12 @@ code {
 }
 
 .header {
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
   width: 1240px;
   height: 68px;
   left: 100px;
   top: 40px;
-}
-.header .header__logo {
-  position: absolute;
-  left: 0%;
-  right: 83.04%;
-  top: 0%;
-  bottom: 0%;
-}
-.header .header__nav {
-  position: absolute;
-  left: 75.08%;
-  right: 0%;
-  top: 25%;
-  bottom: 25%;
-}
-
-.header__NavLink {
-  position: absolute;
-  color: #FF6060;
-}
-
-.Nav {
-  list-style-type: none;
-  display: flex;
-  gap: 1rem;
-  color: #FF6060;
-}
-
-a:visited {
-  color: #FF6060;
-}
-
-a:hover {
-  text-decoration-line: underline;
-}
-
-.NavLink {
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,14 +1,15 @@
-import React ,{ useEffect,useState }from 'react';
+import React ,{ useState }from 'react';
 
-const DisclosePanel = (props) => {
-
+const Collapse = (props) => {
+// HELP SYLVAIN
+// doit avoir 2 etats différents (ouvert et fermé) => useeffect à mettre avant, non?
     // on previent React que ce composant gere un etat qu'on appelle isVisible. ca permet à
     // react de savoir qu'il va devoir redessiner toutes les parties du composant qui dependent de la 
     // valeur de ce state des qu il sera modifié
 
     const [isVisible,setIsVisible]=useState(true)
 
-    // on modifie la valeur du state quand on click sur le bouton et donc react mettera à jour l'affichage du composant
+    // on modifie la valeur du state quand on clique sur le bouton et donc react mettera à jour l'affichage du composant
     function toggle(){
         setIsVisible(!isVisible)
     }
@@ -18,11 +19,12 @@ const DisclosePanel = (props) => {
         // si oui on affiche chaque element du tableau dans un li 
         // sinon on affiche directement le texte dans une div
         if (props.text instanceof Array){
+            
             return (
                     <ul>
                     {  
-                        props.text.map((t,i)=>(
-                            <li key={i}>{t}</li>
+                        props.text.map((text,index)=>(
+                            <li key={index}>{text}</li>
                         ))                        
                     }
                     </ul>
@@ -49,4 +51,4 @@ const DisclosePanel = (props) => {
     );
 };
 
-export default DisclosePanel;
+export default Collapse;

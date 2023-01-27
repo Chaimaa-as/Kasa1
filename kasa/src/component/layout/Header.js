@@ -1,4 +1,5 @@
 import '../../styles/layout/header.scss';
+import '../../styles/layout/header.scss';
 import React from 'react'
 import Logo from './Logo'
 import Navigation from './Navigation'

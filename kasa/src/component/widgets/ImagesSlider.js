@@ -30,7 +30,7 @@ const ImagesSlider = (props) => {
         <div>
             <div>
                 <div onClick={previousImage}> P </div>
-                    <img id="imgContent" src={props.urls[currentImage]} />
+                    <img id="imgContent" src={props.urls[currentImage]} alt=""/>
                 <div onClick={nextImage}>N</div>
             </div>
             <div>{currentImage+1}/{props.urls.length}</div>
