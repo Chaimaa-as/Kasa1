@@ -5,8 +5,8 @@ const Tags = (props) => {
         <div>
             <ul>
                 { 
-                    props.tagsList.map(t=>(
-                        <li>{t}</li>
+                    props.tagsList.map((text,index)=>(
+                        <li key={index}>{text}</li>
                     ))
                 }
                 </ul>

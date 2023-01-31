@@ -6,7 +6,7 @@ const ImagesSlider = (props) => {
 
 
     useEffect(() => {
-        const timer = setTimeout(nextImage, 3000);
+        const timer = setTimeout(nextImage, 5000);
         return () => clearTimeout(timer);
       });
 
@@ -29,9 +29,10 @@ const ImagesSlider = (props) => {
     return (
         <div>
             <div>
-                <div onClick={previousImage}> P </div>
+
+                <button onClick={previousImage}> P </button>
                     <img id="imgContent" src={props.urls[currentImage]} alt=""/>
-                <div onClick={nextImage}>N</div>
+                <button onClick={nextImage}>N</button>
             </div>
             <div>{currentImage+1}/{props.urls.length}</div>
         </div>

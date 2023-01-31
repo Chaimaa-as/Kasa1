@@ -6,6 +6,7 @@ import ApartmentsList from "../../logement.json";
 import DisclosePanel from '../widgets/Collapse';
 import ImagesSlider from '../widgets/ImagesSlider';
 import Tags from '../widgets/Tags';
+import Ratings from '../widgets/Ratings';
 
 const SheetApartment = () => {
     const {id} = useParams()
@@ -15,6 +16,7 @@ const SheetApartment = () => {
             <Header/>
             <div>{apartment.title}</div>
             <Tags tagsList = {apartment.tags}/>
+            <Ratings rating={apartment.rating} />
             <DisclosePanel title="Desciption" text={apartment.description}  />
             <DisclosePanel title="Equipement" text={apartment.equipments}  />
             <ImagesSlider urls={apartment.pictures} />

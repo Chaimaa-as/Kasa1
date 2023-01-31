@@ -2,11 +2,10 @@ import React from 'react';
 
 const Card = (props) => {
     return (
-        <li>
+        <div>
             <img src= {props.apartmentData.cover}/>
             <h1>{props.apartmentData.title}</h1>
-            
-        </li>
+        </div>
     );
 };
 

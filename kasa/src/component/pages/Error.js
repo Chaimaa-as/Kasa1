@@ -1,8 +1,7 @@
 import React from 'react';
-import Logo from '../layout/Logo'
+
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
-import Navigation from '../layout/Navigation';
 
 const Error = () => {
     return (
