@@ -1,4 +1,3 @@
-import '../../styles/components/nav.scss';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -6,11 +5,11 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
     return (
         <div >
-            <ul className="header__nav">
-                <NavLink className="header__NavLink__home" to="/">
+            <ul className="nav">
+                <NavLink className="nav__link" to="/">
                     <li>Accueil</li>
                 </NavLink>
-                <NavLink className="header__NavLink__about" to="/about">
+                <NavLink className="nav__link" to="/about">
                     <li>A propos</li>
                 </NavLink>
             </ul>

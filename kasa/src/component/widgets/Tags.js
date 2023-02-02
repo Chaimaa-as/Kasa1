@@ -9,7 +9,7 @@ const Tags = (props) => {
                         <li key={index}>{text}</li>
                     ))
                 }
-                </ul>
+            </ul>
         </div>
     );
 };

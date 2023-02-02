@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+// import React, { useEffect,useState } from 'react';
 import Apartment from '../layout/Apartment';
 
 // On recupere toutes les donnees du json dans ApartmentsList

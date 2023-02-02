@@ -8,9 +8,9 @@ const Banner = (props) => {
     return (
         <div className="banner">
             {/* on recupere dans l objet props la valeur de l attribut "monimage" pour afficher l'image */}
-            <img src={imgSection} className="imgBanner" alt=""/>
+            <img src={imgSection} className="banner__img" alt=""/>
             {/* on recupere dans l objet props la valeur de l'attribut "montexte" pour afficher le texte */}
-            <h1 className="titleBanner">{props.montexte}</h1>
+            <h1 className="banner__title">{props.montexte}</h1>
         </div>
     );
 };

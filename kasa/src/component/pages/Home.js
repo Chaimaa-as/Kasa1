@@ -4,6 +4,7 @@ import Header from '../layout/Header'
 import ApartmentGrid from '../layout/ApartmentGrid'
 import Banner from '../layout/Banner'
 
+
 export default function Home() {
   return (
     <div >

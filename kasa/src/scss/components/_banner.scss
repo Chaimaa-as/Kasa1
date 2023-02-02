@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+
+.banner{
+  
+
+  .banner__img{
+    border-radius:2rem;
+
+  }
+
+  .banner__title{
+    color: $yellow;
+
+  }
+}
