@@ -1,35 +1,41 @@
+// HEADER START
 .header{
     display:flex;
     justify-content: space-between;
-    width: 1240px;
-    height: 68px;
-    left: 100px;
-    top: 40px;
-
-
+    align-items: center;
     .header__logo{
-        
+        // border : 2px solid green;
     }
     .header__nav{
-        
         display: flex;
-        gap: 1rem;
-        list-style-type: none;
-
-        a{
-            color:red;
-            text-decoration:none;
-        }
-
-        a:visited{
-            
-        }
-
-        a:active{
-            
-
-            
-        }
-        
+        gap: 2rem;
+    }
+    li{
+        list-style: none;
+        color : #FF6060;
+        font-size : 1.2rem;  
     }
 }
+
+.header a{
+    text-decoration: none;
+
+}
+
+//attention la règle avec :active doit être écrite après les autres : :link — :visited — :hover — :active.
+.header a:visited{
+    color:inherit;
+}
+.header a:hover{
+    transform : scale(1.1);
+    transition: all 100ms;
+    cursor: pointer;
+}
+
+// condition à créer si lien est actif
+// a:active{
+//     color :blue;
+//     border-bottom:2px solid purple;
+// }
+
+//HEADER END
