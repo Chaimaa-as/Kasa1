@@ -2,3 +2,23 @@
     background-color: black;
 
 }
+// FOOTER--------------------------------------------------------------
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding : 2rem;
+    height : 209px;
+    width: 1440px;
+    p{
+        color : white;
+        font-weight: 500;
+        font-size:24px;
+    
+    }
+}
+
+
+//

@@ -1,10 +1,9 @@
 import '../../scss/styles.scss';
-
-import React from 'react'
-import Footer from '../layout/Footer'
-import Header from '../layout/Header'
-import ApartmentGrid from '../layout/ApartmentGrid'
-import Banner from '../layout/Banner'
+import React from 'react';
+import Footer from '../layout/Footer';
+import Header from '../layout/Header';
+import ApartmentGrid from '../layout/ApartmentGrid';
+import Hero from '../layout/Hero';
 
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
         <Header/>
         {/*On ajoute un composant Banner en lui passant des attributs avec la valeur de l'image et du texte qu'il 
         doit afficher */}
-        <Banner monimage="./logo.png" montexte="Chez vous, partout et ailleurs" />
+        <Hero monimage="./logo.png" montexte="Chez vous, partout et ailleurs" />
             <ApartmentGrid/>
        
         <Footer/>

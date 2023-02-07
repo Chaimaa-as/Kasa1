@@ -1,4 +1,38 @@
 // HEADER START
+// HEADER START--------------------------------------------------------
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+
+    li{
+        list-style: none;
+        color : #FF6060;
+        font-size : 1.2rem;  
+    }
+}
+
+
+.header__nav{
+    display: flex;
+    gap: 2rem;
+}
+.header a{
+    text-decoration: none;
+}
+
+//attention la règle avec :active doit être écrite après les autres : :link — :visited — :hover — :active.
+.header a:visited{
+    color:inherit;
+}
+.header a:hover{
+    transform : scale(1.1);
+    transition: all 100ms;
+    cursor: pointer;
+}
+
+//HEADER END
 .header{
     display:flex;
     justify-content: space-between;

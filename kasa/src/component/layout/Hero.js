@@ -5,7 +5,7 @@ import React from 'react';
 // a utilisé le composant
 const Banner = (props) => {
     return (
-        <div className="banner">
+        <div className="hero-low-opacity-bg-img">
             <h1>{props.montexte}</h1>
         </div>
 )}

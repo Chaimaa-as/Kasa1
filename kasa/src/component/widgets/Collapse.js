@@ -19,7 +19,7 @@ const Collapse = (props) => {
         if (props.text instanceof Array){
             // si oui on affiche chaque element du tableau dans un li 
             return (
-                <ul>
+                <ul className=''>
                     {  
                         props.text.map((text,index)=>(
                             <li key={index}>{text}</li>
@@ -35,7 +35,7 @@ const Collapse = (props) => {
     }
     return (
         <div>
-            <div>
+            <div className=''>
                 {props.title} 
                 <button onClick={toggle}>A</button>
             </div>

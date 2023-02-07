@@ -8,6 +8,7 @@ import DisclosePanel from '../widgets/Collapse';
 import ImagesSlider from '../widgets/ImagesSlider';
 import Tags from '../widgets/Tags';
 import Ratings from '../widgets/Ratings';
+import Host from '../widgets/Host';
 
 
 const SheetApartment = () => {
@@ -16,12 +17,12 @@ const SheetApartment = () => {
     return (
         <div>
             <Header/>
+            <ImagesSlider urls={apartment.pictures} />
             <div>{apartment.title}</div>
             <div className='apartmentAbstract'>
                 <Tags tagsList = {apartment.tags}/>
-                <div>
-                    <Ratings rating={apartment.rating} />
-                </div>
+                <Ratings rating={apartment.rating} />
+                <Host hostData={apartment.host} />
             </div>
             <div className='apartmentContent'>
                 <div className='contentDescription'>
@@ -31,7 +32,7 @@ const SheetApartment = () => {
                     <DisclosePanel title="Equipement" text={apartment.equipments} />
                 </div>
             </div>
-            <ImagesSlider urls={apartment.pictures} />
+            
             
                 
             <Footer/>
