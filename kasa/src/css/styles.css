@@ -28,6 +28,8 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 .header li {
   list-style: none;
@@ -94,6 +96,8 @@ li {
   position: relative;
   isolation: isolate;
   margin-bottom: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 .hero-low-opacity-bg-img h1 {
   position: absolute;
@@ -142,6 +146,8 @@ li {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 
 .cards a {
@@ -179,6 +185,8 @@ li {
   gap: 4rem;
   padding: 2.5rem;
   margin-bottom: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 
 .toto {
