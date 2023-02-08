@@ -3,8 +3,8 @@ import React from 'react';
 const Host = (props) => {
  
     return (
-        <div>           
-            <img src= {props.hostData.picture}/>
+        <div className='host-infos'>           
+            <img src= {props.hostData.picture} alt=''/>
             <h1>{props.hostData.name}</h1>
         
             

@@ -6,10 +6,12 @@ const Navigation = () => {
     return (
         <div >
             <ul className="header__nav">
-                <NavLink className="nav__link active" to="/">
+                <NavLink to="/" className={({ isActive }) => 
+                      (isActive ? "active-class" : "not-active-class")}>
                     <li>Accueil</li>
                 </NavLink>
-                <NavLink className="nav__link active" to="/about">
+                <NavLink to="/about" className={({ isActive }) => 
+                      (isActive ? "active-class" : "not-active-class")}>
                     <li>A propos</li>
                 </NavLink>
             </ul>

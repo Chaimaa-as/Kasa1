@@ -52,7 +52,7 @@ const ApartmentGrid = () => {
 
 //ON RECUPERE LES DATA DIRECTEMENT EN IMPORTANT UN JSON
 return (
-          <div className='cards'>
+          <div className='gallery'>
             {/* ApartmentsList est un tableau contenant les données de chaque appartement
             Avec la fonction map on cré pour chaque element du tableau un composant
             Apartment auquel on passe dans l attribut item les données d'un appartement */}

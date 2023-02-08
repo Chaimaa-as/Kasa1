@@ -18,17 +18,17 @@ const SheetApartment = () => {
         <div>
             <Header/>
             <ImagesSlider urls={apartment.pictures} />
-            <div>{apartment.title}</div>
+            <div className='apartTitle'>{apartment.title}</div>
             <div className='apartmentAbstract'>
                 <Tags tagsList = {apartment.tags}/>
                 <Ratings rating={apartment.rating} />
                 <Host hostData={apartment.host} />
             </div>
             <div className='apartmentContent'>
-                <div className='contentDescription'>
+                <div className='contentDescription child 1'>
                     <DisclosePanel title="Desciption" text={apartment.description} />
                 </div>
-                <div className='contentEquipement'>
+                <div className='contentEquipement child 2'>
                     <DisclosePanel title="Equipement" text={apartment.equipments} />
                 </div>
             </div>

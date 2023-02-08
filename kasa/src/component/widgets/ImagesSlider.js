@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+// import chevron_carousel_left from '../../assets/imgs/chevron_carousel_left.png';
 
 const ImagesSlider = (props) => {
 
@@ -27,12 +28,17 @@ const ImagesSlider = (props) => {
 
 
     return (
-        <div>
-            <div>
+        <div className='test1'>
+            <div className='test2'>
 
-                <button onClick={previousImage}> P </button>
+                <button className='test3' onClick={previousImage}>
+                &lt;
+                </button>
+                {/* <img src={chevron_carousel_left} alt="" /> */}
                     <img id="imgContent" src={props.urls[currentImage]} alt=""/>
-                <button onClick={nextImage}>N</button>
+                <button onClick={nextImage}>
+                &gt;
+                </button>
             </div>
             <div>{currentImage+1}/{props.urls.length}</div>
         </div>

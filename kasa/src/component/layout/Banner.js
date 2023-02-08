@@ -6,7 +6,7 @@ import React from 'react';
 const Banner = (props) => {
     return (
         <div className="banner">
-            <h1>{props.montexte}</h1>
+            {/* <h1>{props.montexte}</h1> */}
         </div>
 )}
             
