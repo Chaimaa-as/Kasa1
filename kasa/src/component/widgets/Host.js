@@ -1,16 +1,15 @@
-// import React from 'react';
+import React from 'react';
 
-// const Host = () => {
+const Host = (props) => {
  
-//     return (
-//         <div>           
-//             <div className='host__name'>
-       
-//             </div>
-//             <img src={} alt="" />
+    return (
+        <div className='host-infos'>           
+            <img src= {props.hostData.picture} alt=''/>
+            <h1>{props.hostData.name}</h1>
+        
             
-//         </div>
-//     );
-// };
+        </div>
+    );
+};
 
-// export default Host;
+export default Host;

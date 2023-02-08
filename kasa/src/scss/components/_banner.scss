@@ -1,1 +1,85 @@
-// @use '../abstracts' as *;
+// .hero{
+//     position:relative;
+//     margin-bottom:2rem;
+//     // background-size:cover;
+//     // background: linear-gradient(to bottom, red);
+// }
+
+// .hero__img{
+//     width:100%;
+//     border-radius: 2rem;
+
+// }
+
+
+// h1{
+//     position:absolute;
+//     color:white;
+//     left:50%;
+//     top:50%;
+//     transform:translate(-50%, -50%);
+// }
+//
+.hero-low-opacity-bg-img{
+    background-image: url('../../assets/imgs/home_cover.png');
+    background-size: cover;
+    background-position: center;
+    border-radius:2rem;
+    display:flex;
+    justify-content: center;
+    min-height: 224px;
+    position:relative;
+    // it creates a new stacking contexte, 
+    // it means anything inside of the current index can't escape outside of it
+    isolation:isolate;
+    margin-bottom:2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+
+    h1{
+    position:absolute;
+    color:white;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    }
+}
+
+.hero-low-opacity-bg-img::after{
+    content:'';
+    position: absolute;
+    z-index:-1;
+    inset:0;
+    background:black;
+    opacity: 0.3;
+    border-radius: 2rem;
+    
+}
+
+.banner{
+    background-image: url('../../assets/imgs/about_cover.png');
+    background-size: cover;
+    background-position: center;
+    border-radius:2rem;
+
+    min-height: 224px;
+    position:relative;
+    // it creates a new stacking contexte, 
+    // it means anything inside of the current index can't escape outside of it
+    isolation:isolate;
+    margin-bottom:2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+
+
+}
+
+.banner::after{
+    content:'';
+    position: absolute;
+    z-index:-1;
+    inset:0;
+    background:black;
+    opacity: 0.3;
+    border-radius: 2rem;
+}
