@@ -20,41 +20,43 @@
 //     transform:translate(-50%, -50%);
 // }
 //
-.hero-low-opacity-bg-img{
-    background-image: url('../../assets/imgs/home_cover.png');
-    background-size: cover;
-    background-position: center;
-    border-radius:2rem;
-    display:flex;
-    justify-content: center;
-    min-height: 224px;
-    position:relative;
-    // it creates a new stacking contexte, 
-    // it means anything inside of the current index can't escape outside of it
-    isolation:isolate;
-    margin-bottom:2rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
 
-    h1{
-    position:absolute;
-    color:white;
-    left:50%;
-    top:50%;
-    transform:translate(-50%, -50%);
-    }
-}
+//AVANT TEST
+// .hero{
+//     background-image: url('../../assets/imgs/home_cover.png');
+//     background-size: cover;
+//     background-position: center;
+//     border-radius:2rem;
+//     display:flex;
+//     justify-content: center;
+//     min-height: 224px;
+//     position:relative;
+//     // it creates a new stacking contexte, 
+//     // it means anything inside of the current index can't escape outside of it
+//     isolation:isolate;
+//     margin-bottom:2rem;
+//     margin-left: 6rem;
+//     margin-right: 6rem;
+// }
 
-.hero-low-opacity-bg-img::after{
-    content:'';
-    position: absolute;
-    z-index:-1;
-    inset:0;
-    background:black;
-    opacity: 0.3;
-    border-radius: 2rem;
+// .hero::after{
+//     content:'';
+//     position: absolute;
+//     z-index:-1;
+//     inset:0;
+//     background:black;
+//     opacity: 0.3;
+//     border-radius: 2rem;
     
-}
+// }
+
+// .hero h1{
+// position:absolute;
+// color:white;
+// left:50%;
+// top:50%;
+// transform:translate(-50%, -50%);
+// }
 
 .banner{
     background-image: url('../../assets/imgs/about_cover.png');
@@ -67,11 +69,11 @@
     // it creates a new stacking contexte, 
     // it means anything inside of the current index can't escape outside of it
     isolation:isolate;
+
+
     margin-bottom:2rem;
     margin-left: 6rem;
     margin-right: 6rem;
-
-
 }
 
 .banner::after{
@@ -83,3 +85,78 @@
     opacity: 0.3;
     border-radius: 2rem;
 }
+// FIN AVANT TEST
+
+//TEST
+.banner-home{
+
+
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
+    background-image: url('../../assets/imgs/home_cover.png');
+    background-size: cover;
+
+
+    min-height: 224px;
+    max-width: 85%; 
+    margin: 0 auto;
+    // margin-top:68px;
+
+    // margin-left: 100px;
+    // margin-right: 100px;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 500px){
+
+        justify-content: flex-start;
+        min-height: 111px;
+
+    }
+
+
+
+}
+
+.banner-home::before{
+    content:'';
+    position: absolute;
+    background: rgba(0,0,0,1);
+    background-size: cover;
+    // background: rgba(247, 247, 247, 1);
+    // width:1240px;
+    // height:229px;
+    opacity:0.3;
+
+    border-radius:10px;
+
+    
+    //méthode 1 :
+    // top:0px;
+    // left:0px;
+    // // Equivalent à :
+    inset:0;
+
+
+}
+
+.hero-test h1{
+    position:relative;
+    color:white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    @media screen and (max-width: 800px){
+        padding-left:16px;
+    }
+    @media screen and (max-width: 500px){
+        font-size:24px;
+        padding-left:16px;
+        width: 238px;
+        height: 48px;
+    }
+}
+

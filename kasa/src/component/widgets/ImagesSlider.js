@@ -6,10 +6,10 @@ const ImagesSlider = (props) => {
     const [currentImage,setCurrentImage]=useState(0)
 
 
-    useEffect(() => {
-        const timer = setTimeout(nextImage, 5000);
-        return () => clearTimeout(timer);
-      });
+    // useEffect(() => {
+    //     const timer = setTimeout(nextImage, 5000);
+    //     return () => clearTimeout(timer);
+    //   });
 
     function nextImage(){
         let img=currentImage+1
@@ -28,19 +28,18 @@ const ImagesSlider = (props) => {
 
 
     return (
-        <div className='test1'>
-            <div className='test2'>
+        <div className='sliderBanner'>
+            <div className='imgsOnSlider'>
 
-                <button className='test3' onClick={previousImage}>
-                &lt;
+                <button className='left-arrow' onClick={previousImage}>
                 </button>
+
                 {/* <img src={chevron_carousel_left} alt="" /> */}
                     <img id="imgContent" src={props.urls[currentImage]} alt=""/>
-                <button onClick={nextImage}>
-                &gt;
+                <button className='right-arrow' onClick={nextImage}>
                 </button>
             </div>
-            <div>{currentImage+1}/{props.urls.length}</div>
+            <div className='imgNumber'>{currentImage+1}/{props.urls.length}</div>
         </div>
     );
 };

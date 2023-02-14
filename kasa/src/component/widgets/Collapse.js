@@ -19,10 +19,10 @@ const Collapse = (props) => {
         if (props.text instanceof Array){
             // si oui on affiche chaque element du tableau dans un li 
             return (
-                <ul className='tata'>
+                <ul className='panel__description'>
                     {  
                         props.text.map((text,index)=>(
-                            <li key={index}>{text}</li>
+                            <li className='YO' key={index}>{text}</li>
                             ))                        
                         }
                     </ul>
@@ -30,14 +30,14 @@ const Collapse = (props) => {
                 }
         // sinon on affiche directement le texte dans une div
         else{
-            return (<div className='tata'>{props.text}</div>);
+            return (<div className='panel__description'>{props.text}</div>);
         }              
     }
     return (
-        <div className='titi'>
-            <div>
+        <div>
+            <div className='apartmentContent__title'>
                 {props.title} 
-                <button onClick={toggle}>A</button>
+                <button className='collapse__arrow direction' onClick={toggle}></button>
             </div>
             {
                 // si le state isVisible est vrai :

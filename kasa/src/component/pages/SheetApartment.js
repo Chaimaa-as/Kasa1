@@ -1,4 +1,5 @@
 import '../../scss/styles.scss';
+import Error from './Error';
 import React from 'react';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
@@ -9,32 +10,51 @@ import ImagesSlider from '../widgets/ImagesSlider';
 import Tags from '../widgets/Tags';
 import Ratings from '../widgets/Ratings';
 import Host from '../widgets/Host';
+// import ApartHeader from '../layout/ApartHeader';
 
 
 const SheetApartment = () => {
     const {id} = useParams()
-    const apartment = ApartmentsList.find((item) => item.id === id)
+    const apartment= ApartmentsList.find((item) => item.id === id)
     return (
+       !apartment ? <Error/> : 
         <div>
             <Header/>
             <ImagesSlider urls={apartment.pictures} />
-            <div className='apartTitle'>{apartment.title}</div>
-            <div className='apartmentAbstract'>
-                <Tags tagsList = {apartment.tags}/>
-                <Ratings rating={apartment.rating} />
-                <Host hostData={apartment.host} />
-            </div>
-            <div className='apartmentContent'>
-                <div className='contentDescription child 1'>
+
+            <section className='apartment'>
+
+                <div className='flex flex-apart'>
+                    <div className='apartment__title-location'>
+                        <h1 className='apartment__title'>{apartment.title}</h1>
+                        <p className='apartment__location'>{apartment.location}</p>
+                    </div>
+                    <div className='apartment__host'>
+                        <Host hostData={apartment.host} />
+                    </div>
+                </div>
+
+
+                <div className='flex flex-host'>
+                    <div className='apartment__tags'>
+                        <Tags tagsList = {apartment.tags}/>
+                    </div>
+                    <div className='apartment__ratings'>
+                        <Ratings rating={apartment.rating} />
+                    </div>
+                </div>
+            </section>       
+
+
+            <section className='apartment-content'>
+                <div className='apartment-content__details'>
                     <DisclosePanel title="Desciption" text={apartment.description} />
                 </div>
-                <div className='contentEquipement child 2'>
+                <div className='apartment-content__details'>
                     <DisclosePanel title="Equipement" text={apartment.equipments} />
                 </div>
-            </div>
-            
-            
-                
+            </section>
+
             <Footer/>
         </div>
     );

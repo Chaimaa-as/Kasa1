@@ -7,14 +7,13 @@ import { NavLink } from 'react-router-dom';
 const Apartment = (props) => {
     return (
         
-        <NavLink to={`/logement/${props.item.id}` }>
-{/* on recupere dans l objet props la valeur de "cover" dans l'attribut "item"  pour afficher l'image */}
+        <NavLink to={`/logement/${props.item.id}` } className='apartments'>
+            {/* on recupere dans l objet props la valeur de "cover" dans l'attribut "item"  
+            pour afficher l'image */}
 
              <div className='cards'>
                 <img src= {props.item.cover} alt=""/>
-            
-                <h1>{props.item.title}</h1>
-                
+                <h2>{props.item.title}</h2>
                 <div className="overlay"></div>
              </div>
             

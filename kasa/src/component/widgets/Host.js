@@ -3,11 +3,9 @@ import React from 'react';
 const Host = (props) => {
  
     return (
-        <div className='host-infos'>           
-            <img src= {props.hostData.picture} alt=''/>
-            <h1>{props.hostData.name}</h1>
-        
-            
+        <div className='host'>           
+            <img className='host__pic' src= {props.hostData.picture} alt=''/>
+            <h2 className='host__name'>{props.hostData.name}</h2>
         </div>
     );
 };

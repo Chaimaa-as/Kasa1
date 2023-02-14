@@ -9,11 +9,12 @@ const Error = () => {
         <div>
             
             <Header/>
-            <h1>404</h1>
-            <br/>
-            <h1>Oups! La page que vous demandez n'existe pas.</h1>
-            <br/>
-            <p>Retourner sur la page d’accueil</p>
+            <div className='errorSection'>
+                <h1>404 </h1>
+                <p>Oups! La page que vous demandez n'existe pas.</p>
+                <p><a href="/">Retourner sur la page d’accueil</a></p>
+                
+            </div>
             <Footer/>
         </div>
     );

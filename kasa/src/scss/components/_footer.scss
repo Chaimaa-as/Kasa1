@@ -1,7 +1,4 @@
-.footer{
-    background-color: black;
 
-}
 // FOOTER--------------------------------------------------------------
 .footer{
     display: flex;
@@ -11,13 +8,17 @@
     background-color: black;
     padding : 2rem;
     height : 209px;
+    margin-top:2rem;
 
     p{
         color : white;
         font-weight: 500;
         font-size:24px;
-        
-    padding: 1rem;
+ 
+        padding: 1rem;
+        @media screen and (max-width:500px){
+            font-size:12px;
+        }
 
     
     }

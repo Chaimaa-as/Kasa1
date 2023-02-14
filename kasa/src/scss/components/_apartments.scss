@@ -1,0 +1,68 @@
+.apartments{
+    border-radius: 10px;
+
+}
+.cards{
+    position:relative;
+    border-radius: 10px;
+    display:flex;
+    
+    align-items: flex-end;
+    h2{
+        border : 1px solid red;
+        color:white;
+        position:absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    
+       
+        font-weight: 500;
+        width: 60%;
+        padding:1rem;
+        z-index: 1;
+        font-size: clamp(12px, 3vw, 18px);
+    }
+}
+
+
+
+.cards:hover{
+
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    transform: scale(1.1);
+
+}
+
+
+.cards img{
+background-size: cover;
+background-position: center;
+border-radius:0.2rem;
+display:flex;
+justify-content: center;
+min-height: 224px;
+// position:relative;
+object-fit: cover;
+// it creates a new stacking contexte, 
+// it means anything inside of the current index can't escape outside of it
+isolation:isolate;
+border-radius: 10px;
+width: 340px;
+height: 340px;
+
+}
+
+
+
+.overlay{
+width: 340px;
+height: 340px;
+position:absolute;
+background-image: linear-gradient(to top, #000000, #3e1d24, #7a313d, #bc4652, #ff6060);
+opacity:0.6;
+border-radius: 10px;
+&:hover{
+    background-image: none;
+}
+}

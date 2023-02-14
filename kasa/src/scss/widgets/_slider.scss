@@ -1,33 +1,215 @@
+.sliderBanner{
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom:1rem;
+}
+
+
+
 #imgContent{
     height: 415px;
     width: 100%;
     object-fit: cover;
     position:relative;
+    isolation:isolate;
 }
+
+// imgs on slider
+.imgsOnSlider{
+    position:relative;
+}
+.left-arrow{
+    background-color: transparent;
+    background-image: url('../../assets/imgs/chevron_carousel_left.png');
+    width:100px;
+    height:100px;
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+    border: none;
+    top: 50%;
+    left: 5%;
+
+}
+
+.right-arrow{
+    background-color: transparent;
+    background-image: url('../../assets/imgs/chevron_carousel_right.png');
+    width:100px;
+    height:100px;
+    background-size: cover;
+    background-position: center;
+    transform: translate(50%, -50%);
+    position: absolute;
+    z-index: 1;
+    border: none;
+    top: 50%;
+    right:5%;
+
+
+}
+
+.imgNumber{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+
+.collapse__arrow {
+    border:4px solid blue;
+
+    background-image: url('../../assets/imgs/arrow_down.png');
+    
+    height: 36px;
+    width: 38px;
+
+    background-size: cover;
+    background-color: transparent;
+}
+
+.arrow-down{
+    border:2px solid purple;
+        height: 36px;
+    width: 38px;
+}
+
+.arrow-up{
+    border:2px solid violet;
+        height: 36px;
+    width: 38px;
+}
+
+.YO{
+    color:pink;
+    border:2px solid yellow;
+}
+
+// ABSTRACT APART
+.apartment{
+    margin-left: 6rem;
+    margin-right: 6rem;
+    color:#FF6060;
+    margin-bottom:2rem;
+
+}
+
+// TITLE 1 LOCATION
+//---------------
+.apartment__location{
+    margin-bottom:1rem;
+}
+//--------------------
+
+.apartment__tags{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host{
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .host__pic{
+       height:64px;
+        border-radius:50%;
+    }
+
+    .host__name{
+        width: min-content;
+        font-size:18px;
+        text-align: end;
+    }
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:1rem;
+}
+
+.apartment-content{
+    margin-left: 6rem;
+    margin-right: 6rem;
+    display: flex;
+    gap: 4rem;
+}
+
+.apartmentContent__title{
+    background-color: #FF6060;
+    color:white;
+
+    display: flex;
+    justify-content: space-between;
+    padding:0.7rem;
+    border-radius:0.3rem;
+    align-items: center;
+
+}
+
+
+.apartment-content__details{
+
+    width:50%;
+
+}
+
+.panel__description{
+    color:#FF6060;
+    background-color:#F7F7F7;
+    border-radius:10px;
+    min-height:200px;
+    padding:0.7rem;
+
+}
+
 
 // .host-infos{
 
 // }
-.apartTitle{
-    margin-left: 6rem;
-    margin-right: 6rem;
-}
-.host-infos img{
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
+// .apartmentTitle{
+//     margin-left: 6rem;
+//     margin-right: 6rem;
+//     color:#FF6060;
+// }
 
-.apartmentContent{
-    display: flex;
-    gap: 2rem;
+// .apartmentAbstract__host{
+//     border:2px solid red;
+//     display: flex;
+//     flex-direction: column-reverse;
+//     align-items: flex-end;
+   
+// }
 
-    justify-content: space-between;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-bottom: 2rem;
+// .host-infos{
+//     display: flex;
+//     flex-direction: row-reverse;
+//     border: 1px solid blue;
+//     align-items: center;
+// }
+// .host-infos img{
+//     border-radius: 50%;
+//     object-fit: cover;
+//     object-position: center;
+// }
 
-}
+// .apartmentContent{
+//     display: flex;
+//     gap: 4rem;
+
+//     justify-content: space-between;
+//     margin-left: 6rem;
+//     margin-right: 6rem;
+//     margin-bottom: 2rem;
+
+// }
 
 // .apartmentAbstract .slider-button{
 //     position: absolute;
@@ -37,30 +219,42 @@
 //     z-index: 1;
 // }
 
-.child{
+// .child{
 
-    width:50%;
-}
-.titi{
-    background-color: #FF6060;
-    color:white;
-}
+//     width:50%;
+    
+// }
 
-.tata{
-    background-color: #F7F7F7;
-    color:#FF6060;
-}
+// .aprtmentContent__title{
+//     background-color: #FF6060;
+//     border-radius:0.5rem;
+//     color:white;
+//     padding:0.6rem;
+//     display: flex;
+//     justify-content: space-between;
 
-.test1{
-    margin-left: 6rem;
-    margin-right: 6rem;
+    // padding-top: 0.2rem;
+    // padding-right: 1rem;
+    // padding-bottom: 0.2rem;
+    // padding-left: 1rem;
+// }
+// .hop{
+//     background-color: #F7F7F7;
+//     padding-top: 1.2rem;
+//     padding-right: 0.6rem;
+//     padding-bottom: 0.6rem;
+//     padding-left: 0.6rem;
+//     min-height:250px;
+//     color:#FF6060;
 
-}
+// }
 
-.apartmentAbstract{
-    margin-left: 6rem;
-    margin-right: 6rem;
-}
+
+
+// .apartmentAbstract{
+//     margin-left: 6rem;
+//     margin-right: 6rem;
+// }
 
 // .contentDescription{
 //     background-color: red;

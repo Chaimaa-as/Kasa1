@@ -1,0 +1,134 @@
+//test 
+
+
+
+
+
+
+
+
+//---------------------------
+    // background-color: #F7F7F7;
+    // border-radius : 2rem;
+    // color:inherit;
+    // text-decoration: none;
+    // position: relative;
+    // border-radius: 0.2rem;
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    // gap: 4rem;
+    // padding:2.5rem;
+    // margin-bottom: 2rem;
+    // margin-left: 6rem;
+    // margin-right: 6rem;
+// .cards img{
+//     object-fit:cover; 
+//     /*pour zoomer sur la photo */
+//     object-position:center;
+//     /* pour le choix de la partie à zoomer */
+//     width: 340px;
+//     height: 340px;
+//     border-radius: 0.3rem;
+// }
+
+// #imgContent{
+//     border:2px solid red;
+//     width:100%;
+//     height:415px;
+//     object-fit: cover;
+// }
+
+// .apartmentAbstract{
+//     border:2px solid purple;
+// }
+// .apartmentContent {
+//     display: flex;
+//     justify-content: space-between;
+//     gap:1rem;
+// }
+
+// .apartmentAbstract{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     ul{
+//         display: flex;
+//         gap:1rem;
+//     }
+
+//     li{
+//         background-color: #FF6060;
+//         color:white;
+//         border-radius: 0.8rem;
+//         padding:0.3rem 2rem;
+        
+        
+//     }
+// }
+
+
+// .cards{
+//     background-color: #F7F7F7;
+//     border-radius : 2rem;
+    
+
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     gap: 1rem;
+//     padding:2rem;
+//     margin-left: 6rem;
+//     margin-right: 6rem;
+// }
+
+// .cards a{
+//     border:2px solid blue;
+//     color:inherit;
+//     text-decoration: none;
+
+// }
+
+// .toto a::after{
+//     content:'';
+//     position: absolute;
+//     z-index:-1;
+//     inset:0;
+//     background:black;
+//     opacity: 0.3;
+//     border-radius: 2rem;
+// }
+
+// .cards h1{
+//     background-color : green;
+//     color :white;
+//     font-size : 1rem;
+// }
+
+// .cards img{
+//     border: 4px solid red;
+//     height:130px;
+//     width:100%;
+//     object-fit:cover; 
+//     /*pour zoomer sur la photo */
+//     object-position:center;
+//     /* pour le choix de la partie à zoomer */
+    
+//     &::before{
+//         content:'';
+//         position: absolute;
+
+//     }
+// }
+
+// .cards img::after{
+//     content:'';
+//     position: absolute;
+//     z-index:-1;
+//     inset:0;
+//     background-color: red;
+//     opacity:1;
+//     // background-image: linear-gradient(to top, #000000, #3e1d24, #7a313d, #bc4652, #ff6060);
+    
+    
+// }

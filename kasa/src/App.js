@@ -12,8 +12,8 @@ function App() {
          {/* chemins d'accès pour les différentes pages*/}
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
-          <Route path='*' element={<Error/>}/>
           <Route path='/logement/:id' element={<SheetApartment/>}/>
+          <Route path='*' element={<Error/>}/>
         </Routes>
     </BrowserRouter>
     
