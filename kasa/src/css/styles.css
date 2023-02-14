@@ -146,28 +146,41 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 60px;
+  gap: 45px;
   background-color: #F7F7F7;
   border-radius: 2rem;
   margin: 0 auto;
   padding: 50px;
   max-width: 85%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .gallery {
     background-color: transparent;
-    padding-top: 0;
+    gap: 20px;
+    padding: 0px;
   }
 }
 
 .errorSection {
-  border: 2px solid red;
   color: #FF6060;
   text-align: center;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
+.errorSection h1 {
+  font-size: 10rem;
+  margin-bottom: 0.4em;
+}
+.errorSection h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 4.5em;
+}
+.errorSection a {
+  display: inline-block;
+  margin-bottom: 6em;
+  text-decoration: underline;
+}
+
 .navbar__tabs {
   display: flex;
   gap: 2em;
@@ -176,10 +189,10 @@ li {
   font-size: 24px;
   line-height: 142.6%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .navbar__tabs {
     gap: 20px;
-    font-size: 12px;
+    font-size: 1em;
     text-transform: uppercase;
   }
 }
@@ -226,6 +239,16 @@ li {
 .apartments {
   border-radius: 10px;
 }
+@media screen and (max-width: 900px) {
+  .apartments {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .apartments {
+    min-width: 100%;
+  }
+}
 
 .cards {
   position: relative;
@@ -234,14 +257,13 @@ li {
   align-items: flex-end;
 }
 .cards h2 {
-  border: 1px solid red;
   color: white;
   position: absolute;
   bottom: 20px;
   left: 20px;
   right: 20px;
   font-weight: 500;
-  width: 60%;
+  width: 90%;
   padding: 1rem;
   z-index: 1;
   font-size: clamp(12px, 3vw, 18px);
@@ -265,6 +287,11 @@ li {
   width: 340px;
   height: 340px;
 }
+@media screen and (max-width: 900px) {
+  .cards img {
+    min-width: 100%;
+  }
+}
 
 .overlay {
   width: 340px;
@@ -277,11 +304,15 @@ li {
 .overlay:hover {
   background-image: none;
 }
+@media screen and (max-width: 900px) {
+  .overlay {
+    min-width: 100%;
+  }
+}
 
 .sliderBanner {
   max-width: 85%;
   margin: 0 auto;
-  margin-bottom: 1rem;
 }
 
 #imgContent {
@@ -290,6 +321,7 @@ li {
   object-fit: cover;
   position: relative;
   isolation: isolate;
+  margin-bottom: 1rem;
 }
 
 .imgsOnSlider {

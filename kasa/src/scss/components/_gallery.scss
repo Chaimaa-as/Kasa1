@@ -2,15 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 60px;
+    gap: 45px;
     background-color: #F7F7F7;
     border-radius: 2rem;
     margin:0 auto;
     padding: 50px;
     max-width: 85%;
-    @media screen and (max-width: 500px){  
+    @media screen and (max-width: 768px){  
         background-color: transparent;
-        padding-top:0;
+        gap:20px;
+        padding: 0px;
+    
+      
     }
 }
 

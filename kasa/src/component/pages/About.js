@@ -3,12 +3,14 @@ import React from 'react';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import Banner from '../layout/Banner';
+import Collapse from '../widgets/Collapse';
 
 const About = () => {
     return (
         <div>
             <Header/>
             <Banner/>
+            <Collapse/>
             <h1>A propos</h1>
             <br/>
             <p>Paragraphe1</p>

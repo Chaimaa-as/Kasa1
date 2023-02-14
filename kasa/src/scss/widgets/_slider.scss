@@ -1,7 +1,7 @@
 .sliderBanner{
     max-width: 85%;
     margin: 0 auto;
-    margin-bottom:1rem;
+
 }
 
 #imgContent{
@@ -10,6 +10,7 @@
     object-fit: cover;
     position:relative;
     isolation:isolate;
+    margin-bottom:1rem;
 }
 
 // imgs on slider

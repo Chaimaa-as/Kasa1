@@ -1,7 +1,20 @@
 .apartments{
     border-radius: 10px;
-
+    // min-width: 300px;
+    // min-height: 300px;
+    @media screen and (max-width: 900px){  
+        min-width: 100%;
+    
+      
+    }
+    @media screen and (max-width: 500px){  
+        min-width: 100%;
+    
+      
+    }
 }
+
+// a href cards -> inline-block + 100%
 .cards{
     position:relative;
     border-radius: 10px;
@@ -9,7 +22,7 @@
     
     align-items: flex-end;
     h2{
-        border : 1px solid red;
+   
         color:white;
         position:absolute;
         bottom: 20px;
@@ -18,7 +31,7 @@
     
        
         font-weight: 500;
-        width: 60%;
+        width: 90%;
         padding:1rem;
         z-index: 1;
         font-size: clamp(12px, 3vw, 18px);
@@ -48,8 +61,14 @@ object-fit: cover;
 // it means anything inside of the current index can't escape outside of it
 isolation:isolate;
 border-radius: 10px;
+
 width: 340px;
 height: 340px;
+@media screen and (max-width: 900px){  
+    min-width: 100%;
+
+  
+}
 
 }
 
@@ -64,5 +83,10 @@ opacity:0.6;
 border-radius: 10px;
 &:hover{
     background-image: none;
+}
+@media screen and (max-width: 900px){  
+    min-width: 100%;
+
+  
 }
 }
