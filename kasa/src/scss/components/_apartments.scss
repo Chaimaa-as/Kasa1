@@ -21,6 +21,7 @@
     display:flex;
 
     align-items: flex-end;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     h2{
    
         color:white;
@@ -42,9 +43,9 @@
 
 .cards:hover{
 
-    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transform: scale(1.1);
-
+    transition:all 100ms ease-in-out;
     //extract ohmyfood
     // transform: scale(1.15);
     // transition:all 100ms;
@@ -77,8 +78,6 @@ height: 340px;
 }
 
 }
-
-
 
 .overlay{
 width: 340px;

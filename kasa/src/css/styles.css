@@ -13,7 +13,6 @@
 }
 
 body {
-  border: 4px solid red;
   margin: 0 auto;
   max-width: 1440px;
   padding-top: 40px;
@@ -35,111 +34,46 @@ li {
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  align-items: center;
   margin: 0 auto;
   max-width: 85%;
-  height: 68px;
   margin-bottom: 2rem;
-}
-@media screen and (max-width: 900px) {
-  .header {
-    height: 40px;
-  }
-}
-.header img {
-  height: 60%;
-}
-@media screen and (max-width: 700px) {
-  .header img {
-    height: 40px;
-  }
-}
-
-.header__logo {
-  height: 60%;
-}
-@media screen and (max-width: 700px) {
-  .header__logo {
-    height: 40px;
-  }
 }
 
 .banner {
-  background-image: url("../../assets/imgs/about_cover.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 2rem;
-  min-height: 224px;
-  position: relative;
-  isolation: isolate;
-  margin-bottom: 2rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
-
-.banner::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background: black;
-  opacity: 0.3;
-  border-radius: 2rem;
-}
-
-.banner-home {
-  position: relative;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background-image: url("../../assets/imgs/home_cover.png");
+  border-radius: 25px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/imgs/home_cover.png");
+  background-position: center;
   background-size: cover;
-  min-height: 224px;
+  height: 223px;
+  padding: 20px;
   max-width: 85%;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-}
-@media screen and (max-width: 500px) {
-  .banner-home {
-    justify-content: flex-start;
-    min-height: 111px;
-  }
-}
-
-.banner-home::before {
-  content: "";
-  position: absolute;
-  background: rgb(0, 0, 0);
-  background-size: cover;
-  opacity: 0.3;
-  border-radius: 10px;
+  margin: 43px auto;
   inset: 0;
 }
-
-.hero-test h1 {
-  position: relative;
+@media screen and (max-width: 550px) {
+  .banner {
+    margin: 20px auto;
+    height: 120px;
+  }
+}
+.banner__about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/imgs/about_cover.png");
+}
+@media screen and (max-width: 550px) {
+  .banner__about {
+    margin: 20px auto;
+    height: 120px;
+  }
+}
+.banner h1 {
   color: white;
-  font-family: "Montserrat";
-  font-style: normal;
   font-weight: 500;
-  font-size: 48px;
-}
-@media screen and (max-width: 800px) {
-  .hero-test h1 {
-    padding-left: 16px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .hero-test h1 {
-    font-size: 24px;
-    padding-left: 16px;
-    width: 238px;
-    height: 48px;
-  }
+  font-size: 2.5em;
 }
 
 .gallery {
@@ -182,27 +116,28 @@ li {
   text-decoration: underline;
 }
 
-.navbar__tabs {
+.navbar {
+  margin-left: auto;
+}
+.navbar .navbar__tabs {
   display: flex;
   gap: 2em;
-  color: var(--primary-color-red);
+  font-size: 1.4em;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
+  color: var(--primary-color-red);
 }
-@media screen and (max-width: 700px) {
-  .navbar__tabs {
+@media screen and (max-width: 768px) {
+  .navbar .navbar__tabs {
     gap: 20px;
     font-size: 1em;
     text-transform: uppercase;
   }
 }
-
-.navbar__tab--active {
+.navbar .navbar__tabs .navbar__tab--active {
   isolation: isolate;
   position: relative;
 }
-.navbar__tab--active::after {
+.navbar .navbar__tabs .navbar__tab--active::after {
   content: "";
   height: 2px;
   width: 100%;
@@ -270,6 +205,7 @@ li {
   border-radius: 10px;
   display: flex;
   align-items: flex-end;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .cards h2 {
   color: white;
@@ -285,8 +221,9 @@ li {
 }
 
 .cards:hover {
-  box-shadow: 0 2px 8px rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: scale(1.1);
+  transition: all 100ms ease-in-out;
 }
 
 .cards img {
@@ -325,6 +262,37 @@ li {
   }
 }
 
+.paginationBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.paginationBar button {
+  background-color: #FF6060;
+  color: white;
+  font-weight: 500;
+  width: 4em;
+  min-height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-image: linear-gradient(to top, #3e1d24, #7a313d, #bc4652, #ff6060);
+  opacity: 0.8;
+  transition: all 100ms ease-in-out;
+}
+.paginationBar button.active {
+  transform: scale(1.2);
+  opacity: 1;
+}
+.paginationBar button:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  opacity: 1;
+}
+
 .sliderBanner {
   max-width: 85%;
   margin: 0 auto;
@@ -360,7 +328,6 @@ li {
   top: 50%;
   left: 6%;
   cursor: pointer;
-  border: 2px solid red;
 }
 
 .right-arrow {
@@ -381,6 +348,7 @@ li {
 }
 
 .imgNumber {
+  background-color: red;
   position: absolute;
   left: 50%;
   top: 40%;
@@ -420,7 +388,7 @@ li {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .dropdownPanel__title h3 {
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 500;
 }
 
@@ -434,6 +402,15 @@ li {
   z-index: -1;
   margin-top: -0.3rem;
   animation: slide-down 2s ease;
+}
+
+.dropdownPanel {
+  overflow: hidden;
+}
+@media screen and (max-width: 550px) {
+  .dropdownPanel {
+    width: 100%;
+  }
 }
 
 .collapse__arrow {
@@ -575,6 +552,25 @@ li {
   .accomodation_collapse_item {
     width: 100%;
   }
+}
+
+.about-main {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-height: 1.5em;
+}
+@media screen and (max-width: 550px) {
+  .about-main {
+    max-width: 85%;
+  }
+}
+.about-main h3 {
+  font-weight: 500;
+  font-size: 1.1em;
 }
 
 .apartmentDetails {

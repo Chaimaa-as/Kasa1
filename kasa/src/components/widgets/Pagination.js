@@ -12,7 +12,7 @@ const Pagination = ({totalCards, cardsPerPage, setHomeCurrentPage, homeCurrentPa
 
 
   return (
-    <div>
+    <div className='paginationBar' >
         {
             pages.map((page, index) => {
                 return <button key={index} onClick={() => setHomeCurrentPage(page)} className={page == homeCurrentPage ? 'active' :''}>{page}</button>

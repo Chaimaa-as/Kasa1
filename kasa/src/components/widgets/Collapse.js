@@ -33,7 +33,7 @@ const Collapse = (props) => {
         <div className='dropdownPanel'>
             <h3 className='dropdownPanel__title'>
                 {props.title} 
-                <button className={isVisible?'collapse__arrow_up':'collapse__arrow_up'} onClick={toggle}></button>
+                <button className={isVisible?'collapse__arrow up':'collapse__arrow down'} onClick={toggle}></button>
             </h3>
           
           

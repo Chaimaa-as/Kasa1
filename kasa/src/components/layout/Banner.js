@@ -1,27 +1,23 @@
 import React from 'react';
-// import imgSection from '../../assets/imgs/imgSection.png';
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-// Le composant a en argument un objet props qui nous permet de recuperer les attribut qui ont été passé quand on 
-// a utilisé le composant
-const Banner = (props) => {
-    return (
-        <div className="banner">
-            {/* <h1>{props.montexte}</h1> */}
-        </div>
-)}
-            
-            //{/* on recupere dans l objet props la valeur de l attribut "monimage" pour afficher l'image */}
-                // <div className="hero__img">
-                   // {/* <img src={imgSection} alt=""/> */}
-                // </div>
-               // {/* <div className="hero__overlay"></div> */}
-           // {/* on recupere dans l objet props la valeur de l'attribut "montexte" pour afficher le texte */}
-        //         <div className="hero__title">
-        //             <h1>{props.montexte}</h1>
-        //         </div>
-            
-        // </div>
-//     );
-// };
+const Banner = () => {
 
+	const [aboutPage, setAboutPage] = useState(false);
+
+	const location = useLocation();
+	
+	useEffect(() => {
+		if(location.pathname === '/about'){
+			setAboutPage(true)
+		};
+	}, [])
+
+	return (
+		<section className={aboutPage ? 'banner banner__about' : 'banner banner__hero'}>
+			{!aboutPage && <h1>Chez vous, partout et ailleurs</h1>}
+		</section>
+	)
+}
 export default Banner;

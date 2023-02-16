@@ -1,32 +1,34 @@
-@use @use '../scss/abstracts/' as *;
+.navbar{
+    margin-left: auto;
 
-.navbar__tabs{
-    display: flex;
-    gap: 2em;
-    color:var(--primary-color-red);
-    font-weight:500;
-    font-size:24px;
-    line-height: 142.6%;
-    @media screen and (max-width: 700px){
-        gap: 20px;
-        font-size:1em;
-        text-transform: uppercase;
-    }
-}
+    & .navbar__tabs{
+        display: flex;
+        gap: 2em;
+        font-size: 1.4em;
+        font-weight: 500;
+        color:var(--primary-color-red);
+        @media screen and (max-width: 768px){
+            gap: 20px;
+            font-size:1em;
+            text-transform: uppercase;
+        }
 
-.navbar__tab--active{
-    isolation: isolate;
-    position:relative;
-    &::after{
-        content:'';
-        height: 2px;
-        width:100%;
-        position:absolute;
-        border-radius:10px;
-        background: #FF6060;
-        bottom:0px;
-        left:50%;
-        transform:translateX(-50%);
-        transition : all 0.3s ease-in-out;
+        & .navbar__tab--active{
+            isolation: isolate;
+            position:relative;
+            
+            &::after{
+                content:'';
+                height: 2px;
+                width:100%;
+                position:absolute;
+                border-radius:10px;
+                background: #FF6060;
+                bottom:0px;
+                left:50%;
+                transform:translateX(-50%);
+                transition : all 0.3s ease-in-out;
+            }
+        }
     }
 }

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import ApartmentGrid from '../layout/ApartmentGrid';
-import Hero from '../layout/Hero';
+import Banner from '../layout/Banner';
 
 
 export default function Home() {
@@ -20,10 +20,11 @@ export default function Home() {
       en lui passant des attributs avec la valeur de l'image 
       (pkoi la garder ici? actuellement en background-img) 
       et du texte qu'il doit afficher */}
-      <Hero 
+      {/* <Hero 
       monimage="./logo.png" 
-      montexte="Chez vous, partout et ailleurs" />
+      montexte="Chez vous, partout et ailleurs" /> */}
       
+      <Banner/>
       
         <ApartmentGrid/>
 
