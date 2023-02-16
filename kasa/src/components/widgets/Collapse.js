@@ -1,14 +1,9 @@
 import React ,{ useState }from 'react';
 
-// HELP SYLVAIN // doit avoir 2 etats différents (ouvert et fermé) => useeffect à mettre avant, non?
 
-// react de savoir qu'il va devoir redessiner toutes les parties du composant 
-// qui dependent de la valeur de ce state des qu il sera modifié
 const Collapse = (props) => {
-    
-
+    console.log("props in collapse", props) 
     const [isVisible,setIsVisible]=useState(true)
-
 
     function toggle(){
         setIsVisible(!isVisible)
@@ -19,10 +14,10 @@ const Collapse = (props) => {
         if (props.text instanceof Array){
             // si oui on affiche chaque element du tableau dans un li 
             return (
-                <ul>
+                <ul className='dropdownPanel__Content equipment' >
                     {  
                         props.text.map((text,index)=>(
-                            <li className='YO' key={index}>{text}</li>
+                            <li key={index}>{text}</li>
                             ))                        
                         }
                     </ul>
@@ -30,15 +25,19 @@ const Collapse = (props) => {
                 }
         // sinon on affiche directement le texte dans une div
         else{
-            return (<div>{props.text}</div>);
+            return (<div className='dropdownPanel__Content'>{props.text}</div>);
         }              
     }
+
     return (
-        <div>
-            <div className='apartmentContent__title'>
+        <div className='dropdownPanel'>
+            <h3 className='dropdownPanel__title'>
                 {props.title} 
-                <button className='collapse__arrow direction' onClick={toggle}></button>
-            </div>
+                <button className={isVisible?'collapse__arrow_up':'collapse__arrow_up'} onClick={toggle}></button>
+            </h3>
+          
+          
+          
             {
                 // si le state isVisible est vrai :
                     // on appelle la fonction qui va dessiner le contenu du panel

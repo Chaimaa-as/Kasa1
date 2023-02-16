@@ -1,6 +1,9 @@
 .sliderBanner{
     max-width: 85%;
     margin: 0 auto;
+    position: relative;
+    isolation: isolate;
+    margin-bottom:1rem;
 
 }
 
@@ -8,36 +11,46 @@
     height: 415px;
     width: 100%;
     object-fit: cover;
-    position:relative;
-    isolation:isolate;
-    margin-bottom:1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 0.7rem;
+
 }
 
 // imgs on slider
 .imgsOnSlider{
     position:relative;
 }
+
+
 .left-arrow{
     background-color: transparent;
     background-image: url('../../assets/imgs/chevron_carousel_left.png');
-    width:100px;
-    height:100px;
     background-size: cover;
     background-position: center;
     transform: translate(-50%, -50%);
+
+    
+    width: 4rem;
+    top: 50%;
+    height: 15%;
+
     position: absolute;
     z-index: 1;
     border: none;
     top: 50%;
-    left: 5%;
+    left: 6%;
+    cursor: pointer;
+    border:2px solid red;
 
 }
 
 .right-arrow{
     background-color: transparent;
     background-image: url('../../assets/imgs/chevron_carousel_right.png');
-    width:100px;
-    height:100px;
+
+    
+
+
     background-size: cover;
     background-position: center;
     transform: translate(50%, -50%);
@@ -45,8 +58,12 @@
     z-index: 1;
     border: none;
     top: 50%;
-    right:5%;
+    right:6%;
 
+    width: 4rem;
+    top: 50%;
+    height: 15%;
+    cursor: pointer;
 
 }
 

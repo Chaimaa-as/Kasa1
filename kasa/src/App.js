@@ -1,9 +1,10 @@
 import './scss/styles.scss';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
-import About from './component/pages/About';
-import Home from './component/pages/Home';
-import SheetApartment from './component/pages/SheetApartment';
-import Error from './component/pages/Error';
+import About from './components/pages/About';
+import Home from './components/pages/Home';
+import SheetApartment from './components/pages/SheetApartment';
+import Error from './components/pages/Error';
+
 
 function App() {
   return (

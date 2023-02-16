@@ -27,10 +27,10 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 69%;
     margin-bottom: 1rem;
     h1{
-        font-size:36px;
+        font-size:1.8em;
         font-weight: 500;
         @media screen and (max-width: 700px){  
             font-size:18px;
@@ -73,49 +73,7 @@
     }
 
 
-.apartment-content{
-    display: flex;
-    justify-content: space-between;
-    gap:76px;
-    @media screen and (max-width: 700px){  
-        flex-direction: column;
-        
-    }
 
-}
-
-.apartment-content__details{
-
-    width:50%;
-    @media screen and (max-width: 700px){  
-        width:100%;
-        
-    }
-}
-
-
-
-
-.panel__description{
-    color:#FF6060;
-    background-color:#F7F7F7;
-    border-radius:10px;
-    min-height:200px;
-    padding:0.7rem;
-
-}
-
-.apartmentContent__title{
-    background-color: #FF6060;
-    color:white;
-    
-    display: flex;
-    justify-content: space-between;
-    padding:0.7rem;
-    border-radius:0.3rem;
-    align-items: center;
-    
-}
 
 //Host
 .host{

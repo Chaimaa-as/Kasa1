@@ -16,7 +16,10 @@ const Ratings = ({rating}) => {
                 {/* utiliser le spread op //...Array(5) apres .map (index avec trenaire et voir cahioer brouillon pour methode) 
                 => me créé un tableau à la volée ATTENTION mettre en index 5 pour bloquer le tableau que je viens de créer */}
            
-           
+           {/* création d'un array de 5 positions (comme le rating est en objet et non en array) */}
+           {/* spread operator pour ne pas avoir à écrire [1,2,3,4,5] */}
+           {/* on va appeler map en lui passant notre 1er argument ET toujours utiliser 
+           une key donc on lui passe index en 2e argument éviter de mettre les index en key en general!*/}
             {[...Array(5)].map((_, index) => {
                 const ratingValue = index + 1;
                 return (

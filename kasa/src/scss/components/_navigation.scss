@@ -1,3 +1,5 @@
+@use @use '../scss/abstracts/' as *;
+
 .navbar__tabs{
     display: flex;
     gap: 2em;

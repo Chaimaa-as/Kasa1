@@ -1,6 +1,7 @@
 .ul{
     display: flex;
     gap:2rem;
+    flex-wrap: wrap;
     li{
         color:white;
         background-color: #FF6060;
@@ -9,6 +10,9 @@
         padding-right: 1rem;
         padding-bottom: 0.2rem;
         padding-left: 1rem;
-    
+        min-width: 10rem;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 500;
     }
 }
