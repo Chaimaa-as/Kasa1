@@ -1,18 +1,19 @@
-.ul{
+@use '../../scss/util/' as util;
+
+.tagsList ul{
     display: flex;
-    gap:2rem;
+    gap:10px;
     flex-wrap: wrap;
     li{
-        color:white;
-        background-color: #FF6060;
+        @include util.flex-center;
+        color:util.$secondary-color;
+        background-color:util.$primary-color;
         border-radius: 2rem;
-        padding-top: 0.2rem;
-        padding-right: 1rem;
-        padding-bottom: 0.2rem;
-        padding-left: 1rem;
-        min-width: 10rem;
-        text-align: center;
-        font-size: 1em;
         font-weight: 500;
+        font-size:14px;
+        width: 2em;
+        min-width:115px;
+        height: 25px;
+        
     }
 }

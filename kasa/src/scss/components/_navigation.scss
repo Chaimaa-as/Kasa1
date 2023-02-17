@@ -1,16 +1,23 @@
+@use '../../scss/util/' as utils;
 .navbar{
     margin-left: auto;
+    @media screen and (max-width : 550px){
+        height:17px;
+        
+    }
 
     & .navbar__tabs{
         display: flex;
         gap: 2em;
         font-size: 1.4em;
         font-weight: 500;
-        color:var(--primary-color-red);
-        @media screen and (max-width: 768px){
-            gap: 20px;
-            font-size:1em;
+        color:utils.$primary-color;
+        @media screen and (max-width : 550px){
+            gap: 10px;
+            font-size:12px;
             text-transform: uppercase;
+           
+            
         }
 
         & .navbar__tab--active{

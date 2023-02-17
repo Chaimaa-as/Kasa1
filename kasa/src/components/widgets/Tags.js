@@ -2,8 +2,8 @@ import React from 'react';
 
 const Tags = (props) => {
     return (
-        <div className="la-div">
-            <ul className='ul'>
+        <div className="tagsList">
+            <ul>
                 { 
                     props.tagsList.map((text,index)=>(
                         <li key={index}>{text}</li>

@@ -16,7 +16,7 @@ const Banner = () => {
 
 	return (
 		<section className={aboutPage ? 'banner banner__about' : 'banner banner__hero'}>
-			{!aboutPage && <h1>Chez vous, partout et ailleurs</h1>}
+			{!aboutPage && <h1>Chez vous, <br/>partout et ailleurs</h1>}
 		</section>
 	)
 }

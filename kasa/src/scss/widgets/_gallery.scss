@@ -1,0 +1,63 @@
+@use '../../scss/util/' as util;
+
+.slider-banner{
+    max-width: 85%;
+    margin: 0 auto;
+    position: relative;
+    isolation: isolate;
+    margin-bottom:1rem;
+    & img{
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 0.7rem;
+
+ 
+    }
+
+}
+
+.imgsOnSlider{
+    & button{
+    width: 2.7rem;
+    top: 50%;
+    height: 17%;
+    cursor: pointer;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    border: none;
+    @media screen and (max-width : 550px){
+        height: 20px;
+        width: 12px;
+    }
+    &.arrow--left{ 
+        background-image: url('../../assets/imgs/chevron_carousel_left.png');
+        transform: translate(-50%, -50%);
+        left: 6%;
+    }
+    &.arrow--right{
+        background-image: url('../../assets/imgs/chevron_carousel_right.png');
+        transform: translate(50%, -50%);
+        right:6%;
+    }
+}}
+
+.sliderNumber{
+    position: absolute;
+    bottom:2em;
+    width:100%;
+    color: util.$secondary-color;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+
+
+
+

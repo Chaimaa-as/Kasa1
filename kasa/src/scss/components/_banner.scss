@@ -1,4 +1,7 @@
+@use '../../scss/util/' as util;
+
 .banner{
+    @include util.flex-center;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -11,6 +14,32 @@
     max-width: 85%;
     margin: 43px auto;
     inset:0;
+    &__hero{
+        
+        @media screen and (max-width: 550px){
+            padding-left:16px;
+            justify-content: flex-start;
+        }
+        & h1{
+            
+            color: white;
+            // font-size: clamp(20px, 4vw, 48px);
+            font-weight: 500;
+            font-size:2.5em;
+            & br{
+                display:none;
+            }
+            @media screen and (max-width: 550px){
+                font-size:24px;
+                & br{
+                    background-color: aqua;
+                    display:initial;
+                }
+                
+            }
+        }
+    }
+
     @media screen and (max-width: 550px){
         margin: 20px auto;
         height: 120px;
@@ -22,11 +51,6 @@
             height: 120px;
         }
     }
-    & h1{
-        color: white;
-        // font-size: clamp(20px, 4vw, 48px);
-        font-weight: 500;
-        font-size:2.5em;
-    }
+
 }
 

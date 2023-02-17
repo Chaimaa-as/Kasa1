@@ -5,7 +5,7 @@ import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import { useParams } from 'react-router-dom';
 import ApartmentsList from "../../logement.json";
-import ImagesSlider from '../widgets/ImagesSlider';
+import Gallery from '../widgets/Gallery';
 import Collapse from '../widgets/Collapse';
 import Tags from '../widgets/Tags';
 import Ratings from '../widgets/Ratings';
@@ -20,7 +20,7 @@ const SheetApartment = () => {
        !apartment ? <Error/> : 
         <div>
             <Header/>
-            <ImagesSlider urls={apartment.pictures} />
+            <Gallery urls={apartment.pictures} />
             
             <section className='apartmentDetails'>
 
@@ -29,7 +29,7 @@ const SheetApartment = () => {
                     <div className='apartment__header'>
                         <div className='apartment__title-location'>
                             <h1 className='apartment__title'>{apartment.title}</h1>
-                            <p className='apartment__location'>{apartment.location}</p>
+                            <h2 className='apartment__location'>{apartment.location}</h2>
                         </div>
                         <div className='apartment__tags'>
                             <Tags tagsList = {apartment.tags}/>
@@ -56,21 +56,6 @@ const SheetApartment = () => {
                 </div>
          
             </section>
-
-
-{/* mes tests */}
-
-            {/* <FlatHeader title={apartment.title} location={apartment.location}/>
-            
-
-            <FlatContent title="Desciption" text={apartment.description}/>
-            <FlatContent 
-            title="Equipement" 
-            content={apartment.equipments.map(equipmentItem => (
-                <li>{equipmentItem}</li>)
-                )}/> */}
-
-{/* fin mes tests */}
 
             <Footer/>
         </div>

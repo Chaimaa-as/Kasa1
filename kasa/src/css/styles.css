@@ -1,21 +1,22 @@
-:root {
-  --primary-color-red:#FF6060;
-  --secondary-color-grey:#F6F6F6;
-  --tertiary-color-white:white;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
+  box-sizing: inherit;
 }
 
 body {
   margin: 0 auto;
   max-width: 1440px;
   padding-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
 }
 @media screen and (max-width: 500px) {
   body {
@@ -40,8 +41,21 @@ li {
   max-width: 85%;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 550px) {
+  .header {
+    height: 17px;
+    margin-top: 10px;
+    width: 335px;
+  }
+}
+.header img {
+  height: 40px;
+}
 
 .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +68,29 @@ li {
   max-width: 85%;
   margin: 43px auto;
   inset: 0;
+}
+@media screen and (max-width: 550px) {
+  .banner__hero {
+    padding-left: 16px;
+    justify-content: flex-start;
+  }
+}
+.banner__hero h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 2.5em;
+}
+.banner__hero h1 br {
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  .banner__hero h1 {
+    font-size: 24px;
+  }
+  .banner__hero h1 br {
+    background-color: aqua;
+    display: initial;
+  }
 }
 @media screen and (max-width: 550px) {
   .banner {
@@ -70,18 +107,13 @@ li {
     height: 120px;
   }
 }
-.banner h1 {
-  color: white;
-  font-weight: 500;
-  font-size: 2.5em;
-}
 
-.gallery {
+.apartmentsList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 45px;
-  background-color: #F7F7F7;
+  background-color: #F6F6F6;
   border-radius: 2rem;
   margin: 0 auto;
   padding: 50px;
@@ -89,10 +121,11 @@ li {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 @media screen and (max-width: 768px) {
-  .gallery {
+  .apartmentsList {
     background-color: transparent;
     gap: 20px;
     padding: 0px;
+    box-shadow: none;
   }
 }
 
@@ -119,17 +152,22 @@ li {
 .navbar {
   margin-left: auto;
 }
+@media screen and (max-width: 550px) {
+  .navbar {
+    height: 17px;
+  }
+}
 .navbar .navbar__tabs {
   display: flex;
   gap: 2em;
   font-size: 1.4em;
   font-weight: 500;
-  color: var(--primary-color-red);
+  color: #FF6060;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 550px) {
   .navbar .navbar__tabs {
-    gap: 20px;
-    font-size: 1em;
+    gap: 10px;
+    font-size: 12px;
     text-transform: uppercase;
   }
 }
@@ -160,6 +198,9 @@ li {
   height: 209px;
   margin-top: 2rem;
 }
+.footer img {
+  margin-bottom: 20px;
+}
 .footer p {
   color: white;
   font-weight: 500;
@@ -170,20 +211,6 @@ li {
   .footer p {
     font-size: 12px;
   }
-}
-
-.flat-header {
-  border: 2px solid red;
-  width: 100%;
-  height: 200px;
-  color: green;
-}
-
-.flat-content {
-  border: 2px solid blue;
-  width: 100%;
-  height: 200px;
-  color: red;
 }
 
 .apartments {
@@ -210,14 +237,12 @@ li {
 .cards h2 {
   color: white;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
   right: 20px;
   font-weight: 500;
   width: 90%;
   padding: 1rem;
   z-index: 1;
-  font-size: clamp(12px, 3vw, 18px);
+  font-size: 1em;
 }
 
 .cards:hover {
@@ -242,23 +267,8 @@ li {
 @media screen and (max-width: 900px) {
   .cards img {
     min-width: 100%;
-  }
-}
-
-.overlay {
-  width: 340px;
-  height: 340px;
-  position: absolute;
-  background-image: linear-gradient(to top, #000000, #3e1d24, #7a313d, #bc4652, #ff6060);
-  opacity: 0.6;
-  border-radius: 10px;
-}
-.overlay:hover {
-  background-image: none;
-}
-@media screen and (max-width: 900px) {
-  .overlay {
-    min-width: 100%;
+    width: 335px;
+    height: 255px;
   }
 }
 
@@ -293,15 +303,14 @@ li {
   opacity: 1;
 }
 
-.sliderBanner {
+.slider-banner {
   max-width: 85%;
   margin: 0 auto;
   position: relative;
   isolation: isolate;
   margin-bottom: 1rem;
 }
-
-#imgContent {
+.slider-banner img {
   height: 415px;
   width: 100%;
   object-fit: cover;
@@ -309,51 +318,43 @@ li {
   border-radius: 0.7rem;
 }
 
-.imgsOnSlider {
-  position: relative;
-}
-
-.left-arrow {
+.imgsOnSlider button {
+  width: 2.7rem;
+  top: 50%;
+  height: 17%;
+  cursor: pointer;
   background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  border: none;
+}
+@media screen and (max-width: 550px) {
+  .imgsOnSlider button {
+    height: 20px;
+    width: 12px;
+  }
+}
+.imgsOnSlider button.arrow--left {
   background-image: url("../../assets/imgs/chevron_carousel_left.png");
-  background-size: cover;
-  background-position: center;
   transform: translate(-50%, -50%);
-  width: 4rem;
-  top: 50%;
-  height: 15%;
-  position: absolute;
-  z-index: 1;
-  border: none;
-  top: 50%;
   left: 6%;
-  cursor: pointer;
 }
-
-.right-arrow {
-  background-color: transparent;
+.imgsOnSlider button.arrow--right {
   background-image: url("../../assets/imgs/chevron_carousel_right.png");
-  background-size: cover;
-  background-position: center;
   transform: translate(50%, -50%);
-  position: absolute;
-  z-index: 1;
-  border: none;
-  top: 50%;
   right: 6%;
-  width: 4rem;
-  top: 50%;
-  height: 15%;
-  cursor: pointer;
 }
 
-.imgNumber {
-  background-color: red;
+.sliderNumber {
   position: absolute;
-  left: 50%;
-  top: 40%;
+  bottom: 2em;
+  width: 100%;
   color: white;
-  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 500;
 }
 
 .apartment-content {
@@ -386,10 +387,8 @@ li {
   border-radius: 0.7rem;
   align-items: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-.dropdownPanel__title h3 {
-  font-size: 0.8em;
   font-weight: 500;
+  font-size: 1.1em;
 }
 
 .dropdownPanel__Content {
@@ -449,35 +448,16 @@ li {
     transform: translateY(0%);
   }
 }
-.arrow-down {
+.collapse--down {
   border: 2px solid purple;
   height: 36px;
   width: 38px;
 }
 
-.arrow-up {
+.collapse--up {
   border: 2px solid violet;
   height: 36px;
   width: 38px;
-}
-
-.ul {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.ul li {
-  color: white;
-  background-color: #FF6060;
-  border-radius: 2rem;
-  padding-top: 0.2rem;
-  padding-right: 1rem;
-  padding-bottom: 0.2rem;
-  padding-left: 1rem;
-  min-width: 10rem;
-  text-align: center;
-  font-size: 1em;
-  font-weight: 500;
 }
 
 .collapse {
@@ -554,6 +534,25 @@ li {
   }
 }
 
+.tagsList ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tagsList ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #FF6060;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 14px;
+  width: 2em;
+  min-width: 115px;
+  height: 25px;
+}
+
 .about-main {
   max-width: 70%;
   margin: 0 auto;
@@ -604,7 +603,7 @@ li {
   margin-bottom: 1rem;
 }
 .apartment__title-location h1 {
-  font-size: 1.8em;
+  font-size: 1.7em;
   font-weight: 500;
 }
 @media screen and (max-width: 700px) {
@@ -612,9 +611,9 @@ li {
     font-size: 18px;
   }
 }
-.apartment__title-location p {
-  font-size: 18px;
+.apartment__title-location h2 {
   font-weight: 500;
+  font-size: 18px;
 }
 
 .apartment__tags {

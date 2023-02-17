@@ -1,9 +1,11 @@
-.gallery{
+@use '../../scss/util/' as util;
+
+.apartmentsList{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 45px;
-    background-color: #F7F7F7;
+    background-color: util.$bg-color-light;
     border-radius: 2rem;
     margin:0 auto;
     padding: 50px;
@@ -13,6 +15,7 @@
         background-color: transparent;
         gap:20px;
         padding: 0px;
+        box-shadow: none;
     
       
     }

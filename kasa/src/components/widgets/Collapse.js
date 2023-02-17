@@ -1,6 +1,5 @@
 import React ,{ useState }from 'react';
 
-
 const Collapse = (props) => {
     console.log("props in collapse", props) 
     const [isVisible,setIsVisible]=useState(true)
@@ -35,8 +34,6 @@ const Collapse = (props) => {
                 {props.title} 
                 <button className={isVisible?'collapse__arrow up':'collapse__arrow down'} onClick={toggle}></button>
             </h3>
-          
-          
           
             {
                 // si le state isVisible est vrai :

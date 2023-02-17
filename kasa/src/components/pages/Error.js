@@ -1,8 +1,7 @@
 import '../../scss/styles.scss';
 import React from 'react';
-
-
 import Header from '../layout/Header';
+import Footer from '../layout/Footer';
 
 const Error = () => {
     return (
@@ -14,6 +13,7 @@ const Error = () => {
                 <h2>Oups! La page que vous demandez n'existe pas.</h2>
                 <a href="/">Retourner sur la page d’accueil</a>
             </div>
+            <Footer/>
         </div>
     );
 };

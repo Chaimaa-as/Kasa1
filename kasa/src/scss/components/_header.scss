@@ -5,4 +5,13 @@
     margin: 0 auto;
     max-width: 85%;
     margin-bottom: 2rem;
+    @media screen and (max-width : 550px){
+        height:17px;
+        margin-top:10px;
+        width:335px;
+       
+    }
+    & img{
+        height: 40px;
+    }
 }

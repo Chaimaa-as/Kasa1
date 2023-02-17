@@ -1,21 +1,23 @@
-:root{
---primary-color-red:#FF6060;
---secondary-color-grey:#F6F6F6;
---tertiary-color-white:white;
+html{
+    font-size:100%;
+    box-sizing:border-box;
 }
 
-* {
+*,
+*::before,
+*::after {
     margin:0;
     padding:0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
+    box-sizing: inherit;
+
 }
     
 body {
     margin: 0 auto;
     max-width: 1440px;
     padding-top: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
     @media screen and (max-width: 500px) {
         padding-top: 20px;
     }

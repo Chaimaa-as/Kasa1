@@ -1,0 +1,39 @@
+@use '../../scss/util/' as util;
+.colorMode{
+    width:100vw;
+    height:100vh;
+}
+
+#light{
+    background-color: pink;
+}
+
+#dark{
+    background-color: purple;
+}
+
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & button{
+        border:2px solid lime;
+        width:50px;
+        height:50px;
+    }
+}
+
+.btn{
+    @include util.hover-lift();
+}
+
+.card{
+    @include util.pseudo(after);
+}
+
+// exemple ajustement du pseudo-elemt
+.cardAdjusted{
+    @include util.pseudo($top:50%,$pos:relative);
+}
+

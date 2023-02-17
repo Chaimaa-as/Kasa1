@@ -30,7 +30,7 @@
     width: 69%;
     margin-bottom: 1rem;
     h1{
-        font-size:1.8em;
+        font-size:1.7em;
         font-weight: 500;
         @media screen and (max-width: 700px){  
             font-size:18px;
@@ -39,9 +39,9 @@
 
     }
 
-    p{
-        font-size:18px;
+    h2{
         font-weight: 500;
+        font-size: 18px;
     }
 }
 .apartment__tags{
