@@ -2,7 +2,7 @@ import React ,{ useState }from 'react';
 
 const Collapse = (props) => {
     console.log("props in collapse", props) 
-    const [isVisible,setIsVisible]=useState(true)
+    const [isVisible,setIsVisible]=useState(false)
 
     function toggle(){
         setIsVisible(!isVisible)
@@ -13,7 +13,7 @@ const Collapse = (props) => {
         if (props.text instanceof Array){
             // si oui on affiche chaque element du tableau dans un li 
             return (
-                <ul className='dropdownPanel__Content equipment' >
+                <ul className='collapsePanel__equipment' >
                     {  
                         props.text.map((text,index)=>(
                             <li key={index}>{text}</li>
@@ -24,16 +24,16 @@ const Collapse = (props) => {
                 }
         // sinon on affiche directement le texte dans une div
         else{
-            return (<div className='dropdownPanel__Content'>{props.text}</div>);
+            return (<div className='collapsePanel__description'>{props.text}</div>);
         }              
     }
 
     return (
-        <div className='dropdownPanel'>
-            <h3 className='dropdownPanel__title'>
+        <div className='collapsePanel'>
+            <div className='collapsePanel__title'>
                 {props.title} 
-                <button className={isVisible?'collapse__arrow up':'collapse__arrow down'} onClick={toggle}></button>
-            </h3>
+                <button className={isVisible?'collapsePanel__arrow--up active':'collapsePanel__arrow--down active'} onClick={toggle}></button>
+            </div>
           
             {
                 // si le state isVisible est vrai :

@@ -5,13 +5,17 @@
     margin: 0 auto;
     position: relative;
     isolation: isolate;
-    margin-bottom:1rem;
+    margin-bottom:0.8em;
+
     & img{
         height: 415px;
         width: 100%;
         object-fit: cover;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border-radius: 0.7rem;
+        @media screen and (max-width : 550px){
+            height: 255px;
+        }
 
  
     }

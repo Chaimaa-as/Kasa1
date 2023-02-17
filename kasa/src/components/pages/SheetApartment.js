@@ -22,39 +22,29 @@ const SheetApartment = () => {
             <Header/>
             <Gallery urls={apartment.pictures} />
             
-            <section className='apartmentDetails'>
+            {/* BLOC HEADER */}
+            <section className='apartmentSheet'>
 
-                <div className='apartment-abstracts'>
-
-                    <div className='apartment__header'>
-                        <div className='apartment__title-location'>
-                            <h1 className='apartment__title'>{apartment.title}</h1>
-                            <h2 className='apartment__location'>{apartment.location}</h2>
-                        </div>
-                        <div className='apartment__tags'>
-                            <Tags tagsList = {apartment.tags}/>
-                        </div>
+                <div className='apartmentSheet__header'>
+                    <div>
+                        <h1>{apartment.title}</h1>
+                        <h2>{apartment.location}</h2>
                     </div>
-
-                    <div className='apartment__owner'>
-                        <div className='apartment__host'>
-                            <Host hostData={apartment.host} />
-                        </div>
-                        <div className='apartment__ratings'>
-                            <Ratings rating={apartment.rating} />
-                        </div>
-                    </div>
+                    <Tags tagsList = {apartment.tags}/>
                 </div>
+        
                 
-                <div className='apartment-content'>
-                    <div className='apartment-content__details'>
-                        <Collapse title="Desciption" text={apartment.description} />
-                    </div>
-                    <div className='apartment-content__details'>
-                        <Collapse title="Equipement" text={apartment.equipments} />
-                    </div>
+                <div className='apartmentSheet__host'>
+                    <Host hostData={apartment.host} />
+                    <Ratings rating={apartment.rating}/>
                 </div>
-         
+
+            </section>
+
+            {/* BLOC CONTENT */}
+            <section className='apartmentSheet__content'>
+                <Collapse title="Description" text={apartment.description} />
+                <Collapse title="Equipement" text={apartment.equipments} />
             </section>
 
             <Footer/>

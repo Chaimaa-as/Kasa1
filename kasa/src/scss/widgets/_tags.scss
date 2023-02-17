@@ -1,19 +1,24 @@
 @use '../../scss/util/' as util;
 
-.tagsList ul{
+.tagsList {
+    margin-bottom:1rem;
+    ul{
     display: flex;
     gap:10px;
     flex-wrap: wrap;
-    li{
-        @include util.flex-center;
-        color:util.$secondary-color;
-        background-color:util.$primary-color;
-        border-radius: 2rem;
-        font-weight: 500;
-        font-size:14px;
-        width: 2em;
-        min-width:115px;
-        height: 25px;
+        li{
+            @include util.flex-center;
+            color:util.$secondary-color;
+            background-color:util.$primary-color;
+            border-radius: 0.7em;
+            font-weight: 500;
+            font-size:1em;
+            min-width:10em;
+            padding:0.3em 1em;
+            @media screen and (max-width:550px){
+                font-size:0.7rem;
+            }
+    }
         
     }
 }

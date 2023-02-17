@@ -1,12 +1,13 @@
 import React from 'react';
 import redStar from '../../assets/imgs/star_grey.png';
 import greyStar from '../../assets/imgs/star_red.png';
+// @use '../../scss/widgets/ratings.scss';
 
 
 const Ratings = ({rating}) => {
 
     return (
-        <div className="host_stars">
+        <div className="hostRating">
                 {/* soit un tableau avec star vide ou pleine */}
                 {/* tableau à faire avant le return et mapper sur le tableau */}
                 {/* boucle pour pouvoir pousser dans le tableau */}

@@ -1,3 +1,4 @@
+@use '../../scss/util/' as util;
 .apartments{
     border-radius: 10px;
     // min-width: 300px;
@@ -22,6 +23,7 @@
 
     align-items: flex-end;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @include util.hover-lift();
     h2{
    
         color:white;
@@ -42,9 +44,9 @@
 
 .cards:hover{
 
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transform: scale(1.1);
-    transition:all 100ms ease-in-out;
+    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    // transform: scale(1.1);
+    // transition:all 100ms ease-in-out;
     //extract ohmyfood
     // transform: scale(1.15);
     // transition:all 100ms;
