@@ -27,24 +27,23 @@
         z-index: 1;
         font-size: 1em;
     }
-}
-
-.cards img{
-background-size: cover;
-background-position: center;
-border-radius:0.2rem;
-display:flex;
-justify-content: center;
-min-height: 224px;
-// position:relative;
-object-fit: cover;
-border-radius: 10px;
-
-width: 340px;
-height: 340px;
-@media (max-width:util.$breakpoint-mobile){  
-    min-width: 100%;
-    width: 335px;
-    height: 255px;
-}
+    img{
+        background-size: cover;
+        background-position: center;
+        border-radius:0.2rem;
+        // display:flex;
+        // justify-content: center;
+        @include util.flex-center();
+        min-height: 224px;
+        // position:relative;
+        object-fit: cover;
+        border-radius: 10px;
+        width: 328px;
+        height: 328px;
+        @media (max-width:util.$breakpoint-mobile){  
+            min-width: 100%;
+            width: 335px;
+            height: 255px;
+        }
+    }
 }

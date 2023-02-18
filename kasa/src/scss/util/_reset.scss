@@ -12,29 +12,21 @@ html{
 }
 
 body {
-min-height:100%;
-margin:0;
-padding:0;
-position: relative;
-box-sizing:border-box;
-
-
-
+    min-height:100%;
+    font-family: "Montserrat", sans-serif;
+    margin:0;
+    padding:0;
+    position: relative;
+    box-sizing:border-box;
 
     // margin: 0 auto;
     // max-width: 1440px;
     // padding-top: 40px;
-    font-family: "Montserrat", sans-serif;
     font-style: normal;
-//     @media screen and (max-width: 500px) {
-//         padding-top: 20px;
-//     }
+    @media screen and (max-width: 500px) {
+        padding-top: 20px;
+    }
 }
-
-// test
-
-
-
 
 a{
     text-decoration: none;

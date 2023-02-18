@@ -1,44 +1,35 @@
 @use '../../scss/util/' as util;
 
 footer{
-
     //test
     position: absolute; 
     height: 12.8rem; 
     width: 100%; 
     bottom: 0; 
-    
-
-    
-
-
     //
 
     clear:both;
     margin-top: -150px;
-    display: flex;
+    // display: flex;
+    @include util.flexBlock();
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+    // justify-content: center;
+    // align-items: center;
+    background-color: util.$tertiary-color;
     padding : 2rem;
     height : 209px;
     margin-top:auto;
     img{
-      
         margin-bottom: 20px;
     }
     p{
-        color : white;
+        color : util.$secondary-color;
         font-weight: 500;
         font-size:24px;
- 
         padding: 1rem;
         @media (max-width:util.$breakpoint-mobile){
             font-size:12px;
             
         }
-
-    
     }
 }

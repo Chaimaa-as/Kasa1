@@ -1,7 +1,7 @@
 @use '../../scss/util' as util;
 
 .errorSection{
-    color:#FF6060;
+    color:util.$primary-color;
     text-align: center;
     width:100%;
     @media screen and (max-width: 500px){  

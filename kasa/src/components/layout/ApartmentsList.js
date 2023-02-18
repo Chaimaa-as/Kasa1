@@ -19,6 +19,7 @@ return (
       {datas.currentData().map(item => (
         <Apartment key={item.id} item={item}/>
         ))}
+        
         <Pagination cardsPerPage={cardPerPage} totalCards={ApartmentsList.length} setHomeCurrentPage={handlePageChange} homeCurrentPage={page}/>
   </div>
   );

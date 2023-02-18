@@ -8,7 +8,6 @@ const Apartment = (props) => {
              <div className='cards'>
                 <img src= {props.item.cover} alt=""/>
                 <h2>{props.item.title}</h2>
-                <div className="overlay"></div>
              </div>
         </NavLink>
     );

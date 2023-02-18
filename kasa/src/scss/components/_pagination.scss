@@ -1,19 +1,16 @@
 @use '../../scss/util/' as util;
 
 .paginationBar{
-
-
     width:100%;
 
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    @include util.flex-center();
     gap: 1em;
     margin-bottom: 2em;
-
-
     & button{
-        background-color: #FF6060;
-        color:white;
+        background-color: util.$primary-color;
+        color:util.$secondary-color;
         font-weight: 500;
         width:4em;
         min-height: 40px;

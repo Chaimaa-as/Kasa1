@@ -21,7 +21,7 @@
         }
         & h1{
             
-            color: white;
+            color: util.$secondary-color;
             // font-size: clamp(20px, 4vw, 48px);
             font-weight: 500;
             font-size:2.5em;
@@ -45,11 +45,14 @@
     }
     &__about{
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/about_cover.png');
+        
         @media (max-width:util.$breakpoint-mobile){
             margin: 20px auto;
             height: 120px;
+            & img{
+                min-height: 255px;
+            }
         }
     }
-
 }
 
