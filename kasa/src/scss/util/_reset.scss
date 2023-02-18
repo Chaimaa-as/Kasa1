@@ -7,21 +7,21 @@ html{
 *{
     margin:0;
     padding:0;
-    box-sizing: inherit;
+    box-sizing:border-box;
 
 }
 
 body {
-    min-height:100%;
+    // min-height:100%;
     font-family: "Montserrat", sans-serif;
-    margin:0;
-    padding:0;
-    position: relative;
-    box-sizing:border-box;
+    // margin:0;
+    // padding:0;
+    // position: relative;
+    // box-sizing:border-box;
 
-    // margin: 0 auto;
-    // max-width: 1440px;
-    // padding-top: 40px;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-top: 40px;
     font-style: normal;
     @media screen and (max-width: 500px) {
         padding-top: 20px;

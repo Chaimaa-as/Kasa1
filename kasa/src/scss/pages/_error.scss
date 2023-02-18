@@ -4,9 +4,11 @@
     color:util.$primary-color;
     text-align: center;
     width:100%;
+    min-height:74vh;
+    max-width:85%;
     @media screen and (max-width: 500px){  
 
-       
+      padding:9rem 0;
     }
 
     h1{

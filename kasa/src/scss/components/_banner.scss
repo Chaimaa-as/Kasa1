@@ -2,7 +2,7 @@
 
 .banner{
     @include util.flex-center;
-
+    align-items: center;
     border-radius: 2rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/home_cover.png');
     background-position: center;
