@@ -5,13 +5,10 @@
     @media (max-width:util.$breakpoint-mobile){
         min-width: 100%;
     }
-    @media (max-width:util.$breakpoint-tablet){
-        min-width: 100%;
-    }
 }
 
 .cards{
-    position:relative;
+
     isolation: isolate;
     border-radius: 10px;
     display:flex;
@@ -31,11 +28,7 @@
         background-size: cover;
         background-position: center;
         border-radius:0.2rem;
-        // display:flex;
-        // justify-content: center;
         @include util.flex-center();
-        min-height: 224px;
-        // position:relative;
         object-fit: cover;
         border-radius: 10px;
         width: 328px;

@@ -1,16 +1,16 @@
 @use '../../scss/util' as util;
 
 header{
-    @include util.flex-align;
-    // display:flex;
-    // align-items: center;
+    // @include util.flex-align;
+    display:flex;
+    align-items: center;
     margin: 0 auto;
     max-width: 85%;
     margin-bottom: 2rem;
     @media (max-width:util.$breakpoint-mobile){
         height:17px;
         margin-top:10px;
-        width:335px;
+       
     }
     & img{
         height: 40px;

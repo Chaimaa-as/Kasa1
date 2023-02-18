@@ -3,9 +3,7 @@
     margin-left: auto;
     @media (max-width:util.$breakpoint-mobile){
         height:17px;
-        
     }
-
     & .navbar__tabs{
         display: flex;
         gap: 2em;

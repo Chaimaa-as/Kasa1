@@ -1,11 +1,11 @@
 @use '../../scss/util' as util;
 
 .apartmentSheet{
-    @include util.flexBlock($justify:space-between, $direction: row);
-    // display: flex;
-    // justify-content: space-between;
+
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 1rem;
-    // flex-direction: row;
+    flex-direction: row;
     max-width: 85%;
     margin: 2em auto;
     @media (max-width:util.$breakpoint-mobile){  
@@ -39,16 +39,15 @@
     }
   
     &__host{
-        @include util.flexBlock($justify:space-between, $align:flex-end);
-        // display: flex;
-        // flex-direction: column;
-        // align-items: flex-end;
-        // justify-content: space-between;
-        @media screen and (max-width: 700px){  
-            @include util.flexBlock($direction:row-reverse);
-            // flex-direction: row-reverse;
-            // align-items: center;
-            // justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        @media screen and (max-width: 550px){  
+
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 }
@@ -66,9 +65,7 @@
     }
 }
 
-
 .apartment__title-location{
-  
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
