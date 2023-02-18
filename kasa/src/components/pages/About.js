@@ -10,7 +10,7 @@ const About = () => {
         <>
             <Header/>
             <Banner/>
-            
+
             <div className='about-main'>
                 <Collapse title="Fiabilité" text="Les annonces postées sur Kasa garantissent une fiabilité totale.
                     Les photos sont conformes aux logements, et toutes les informations

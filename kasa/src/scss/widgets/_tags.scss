@@ -7,7 +7,10 @@
     gap:10px;
     flex-wrap: wrap;
         li{
-            @include util.flex-center;
+            // @include util.flex-center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
             color:util.$secondary-color;
             background-color:util.$primary-color;
             border-radius: 0.7em;
@@ -15,7 +18,7 @@
             font-size:1em;
             min-width:10em;
             padding:0.3em 1em;
-            @media screen and (max-width:550px){
+            @media (max-width:util.$breakpoint-mobile){
                 font-size:0.7rem;
             }
     }

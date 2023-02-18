@@ -4,12 +4,11 @@ import React from 'react';
 import Logo from './Logo';
 import Navigation from './Navigation';
 
-
 export default function Header() {
   return (
-    <div className="header">
+    <header>
       <Logo/>
       <Navigation/>
-    </div>
+    </header>
   )
 }

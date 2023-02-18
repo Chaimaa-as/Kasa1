@@ -1,37 +1,26 @@
 @use '../../scss/util/' as util;
+
 .apartments{
     border-radius: 10px;
-    // min-width: 300px;
-    // min-height: 300px;
-    @media screen and (max-width: 900px){  
+    @media (max-width:util.$breakpoint-mobile){
         min-width: 100%;
-    
-      
     }
-    @media screen and (max-width: 500px){  
+    @media (max-width:util.$breakpoint-tablet){
         min-width: 100%;
-    
-      
     }
 }
 
-// a href cards -> inline-block + 100%
 .cards{
     position:relative;
+    isolation: isolate;
     border-radius: 10px;
     display:flex;
-
     align-items: flex-end;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     @include util.hover-lift();
     h2{
-   
-        color:white;
+        color:util.$secondary-color;
         position:absolute;
-       
         right: 20px;
-    
-       
         font-weight: 500;
         width: 90%;
         padding:1rem;
@@ -39,22 +28,6 @@
         font-size: 1em;
     }
 }
-
-
-
-.cards:hover{
-
-    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    // transform: scale(1.1);
-    // transition:all 100ms ease-in-out;
-    //extract ohmyfood
-    // transform: scale(1.15);
-    // transition:all 100ms;
-    // opacity:0.8;
-    // cursor:pointer;
-
-}
-
 
 .cards img{
 background-size: cover;
@@ -65,36 +38,13 @@ justify-content: center;
 min-height: 224px;
 // position:relative;
 object-fit: cover;
-// it creates a new stacking contexte, 
-// it means anything inside of the current index can't escape outside of it
-isolation:isolate;
 border-radius: 10px;
 
 width: 340px;
 height: 340px;
-@media screen and (max-width: 900px){  
+@media (max-width:util.$breakpoint-mobile){  
     min-width: 100%;
     width: 335px;
     height: 255px;
-
-  
 }
-
 }
-
-// .overlay{
-// width: 340px;
-// height: 340px;
-// position:absolute;
-// background-image: linear-gradient(to top, #000000, #3e1d24, #7a313d, #bc4652, #ff6060);
-// opacity:0.6;
-// border-radius: 10px;
-// &:hover{
-//     background-image: none;
-// }
-// @media screen and (max-width: 900px){  
-//     min-width: 100%;
-
-  
-// }
-// }

@@ -8,7 +8,7 @@
     flex-direction: row;
     max-width: 85%;
     margin: 2em auto;
-    @media screen and (max-width: 700px){  
+    @media (max-width:util.$breakpoint-mobile){  
         flex-direction: column;
     }
 
@@ -29,17 +29,13 @@
         font-size:1.4rem;
         margin-block:0;
         margin-bottom:1rem;
-        @media screen and (max-width:550px){
+        @media (max-width:util.$breakpoint-mobile){
             font-size:0.9rem;
         }
     }
 
     &__header{
         flex-grow: 1;
-        @media screen and (max-width:550px){
-           
-        }
-
     }
   
     &__host{
@@ -78,9 +74,8 @@
     h1{
         font-size:1.7em;
         font-weight: 500;
-        @media screen and (max-width: 700px){  
+        @media (max-width:util.$breakpoint-tablet){  
             font-size:18px;
-            
         }
 
     }

@@ -1,7 +1,7 @@
-@use '../../scss/util/' as utils;
+@use '../../scss/util/' as util;
 .navbar{
     margin-left: auto;
-    @media screen and (max-width : 550px){
+    @media (max-width:util.$breakpoint-mobile){
         height:17px;
         
     }
@@ -11,26 +11,22 @@
         gap: 2em;
         font-size: 1.4em;
         font-weight: 500;
-        color:utils.$primary-color;
+        color:util.$primary-color;
         @media screen and (max-width : 550px){
             gap: 10px;
             font-size:12px;
             text-transform: uppercase;
-           
-            
         }
-
         & .navbar__tab--active{
             isolation: isolate;
             position:relative;
-            
             &::after{
                 content:'';
                 height: 2px;
                 width:100%;
                 position:absolute;
                 border-radius:10px;
-                background: #FF6060;
+                background:util.$primary-color;
                 bottom:0px;
                 left:50%;
                 transform:translateX(-50%);
@@ -38,4 +34,14 @@
             }
         }
     }
+}
+
+@keyframes navUnderline{
+to{
+    width:100%;
+} to {
+
+}
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0%)}
 }

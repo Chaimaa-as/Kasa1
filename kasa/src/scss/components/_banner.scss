@@ -2,9 +2,7 @@
 
 .banner{
     @include util.flex-center;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+
     border-radius: 2rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/home_cover.png');
     background-position: center;
@@ -17,7 +15,7 @@
     @include util.banner-styling();
     &__hero{
         
-        @media screen and (max-width: 550px){
+        @media (max-width:util.$breakpoint-mobile){
             padding-left:16px;
             justify-content: flex-start;
         }
@@ -30,7 +28,7 @@
             & br{
                 display:none;
             }
-            @media screen and (max-width: 550px){
+            @media (max-width:util.$breakpoint-mobile){
                 font-size:24px;
                 & br{
                     background-color: aqua;
@@ -41,13 +39,13 @@
         }
     }
 
-    @media screen and (max-width: 550px){
+    @media (max-width:util.$breakpoint-mobile){
         margin: 20px auto;
         height: 120px;
     }
     &__about{
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/about_cover.png');
-        @media screen and (max-width: 550px){
+        @media (max-width:util.$breakpoint-mobile){
             margin: 20px auto;
             height: 120px;
         }

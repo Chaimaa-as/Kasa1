@@ -11,8 +11,6 @@ import Tags from '../widgets/Tags';
 import Ratings from '../widgets/Ratings';
 import Host from '../widgets/Host';
 
-
-
 const SheetApartment = () => {
     const {id} = useParams()
     const apartment= ApartmentsList.find((item) => item.id === id)
@@ -21,10 +19,9 @@ const SheetApartment = () => {
         <div>
             <Header/>
             <Gallery urls={apartment.pictures} />
-            
+
             {/* BLOC HEADER */}
             <section className='apartmentSheet'>
-
                 <div className='apartmentSheet__header'>
                     <div>
                         <h1>{apartment.title}</h1>
@@ -32,13 +29,10 @@ const SheetApartment = () => {
                     </div>
                     <Tags tagsList = {apartment.tags}/>
                 </div>
-        
-                
                 <div className='apartmentSheet__host'>
                     <Host hostData={apartment.host} />
                     <Ratings rating={apartment.rating}/>
                 </div>
-
             </section>
 
             {/* BLOC CONTENT */}

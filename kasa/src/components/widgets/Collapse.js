@@ -35,12 +35,9 @@ const Collapse = (props) => {
                 <button className={isVisible?'collapsePanel__arrow--up active':'collapsePanel__arrow--down active'} onClick={toggle}></button>
             </div>
           
+            {/* // si le state isVisible est vrai : appel de la fonction 
+            // sinon on affiche juste des guillemets */}
             {
-                // si le state isVisible est vrai :
-                    // on appelle la fonction qui va dessiner le contenu du panel
-                // sinon on affiche juste des guillemets
-                // remplacer par ternaire diretement
-                // si propr.text sinnon 
                 isVisible?drawPanel():""
             }
         </div>

@@ -3,7 +3,7 @@
 .collapsePanel{
     width:100%;
     overflow: hidden;
-    @media screen and (max-width : 550px){
+    @media (max-width:util.$breakpoint-mobile){
 
     };
     &__title{
@@ -44,7 +44,7 @@
         padding-right:20px;
         padding-top:20px;
         animation:slide-down 1000ms ease-in-out; 
-        @media screen and (max-width : 550px){
+        @media (max-width:util.$breakpoint-mobile){
             font-size: 13px;
             line-height:17px;
             height:143px;
@@ -81,9 +81,6 @@ button{
     background-color: transparent;
     background-size: cover;
     margin-right: 10px;
-    @media screen and (max-width : 550px){
-
-    };
 
     &.collapsePanel__arrow--up{
         background-image: url('../../assets/imgs/arrow_up.png');

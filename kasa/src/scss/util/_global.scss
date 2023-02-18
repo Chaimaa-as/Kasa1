@@ -1,32 +1,21 @@
-html{
-    font-size:100%;
-    box-sizing:border-box;
-}
+// COULEURS------------------------------------
+$primary-color:#FF6060;
+$secondary-color:white;
+$tertiary-color:black;
 
-*,
-*::before,
-*::after {
-    margin:0;
-    padding:0;
-    box-sizing: inherit;
-}
-    
-body {
-    margin: 0 auto;
-    max-width: 1440px;
-    padding-top: 40px;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    @media screen and (max-width: 500px) {
-        padding-top: 20px;
-    }
-}
+// BACKGROUNDS
+$bg-color-light:#F7F7F7;
+$bg-color-medium:#C4C4C4;
+$bg-color-dark:black;
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
 
-li{
-    list-style: none;
-}
+$star-color-empty:#E3E3E3;
+$star-color-full:#FF6060;
+
+// media queries
+$breakpoint-mobile:550px;
+$breakpoint-tablet:768px;
+
+
+
+// border-radius: 0rem 1rem 1rem 0rem;
