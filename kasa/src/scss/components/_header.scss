@@ -12,7 +12,7 @@ header{
     & img{
         min-height: 1rem;
         @media (max-width:util.$breakpoint-mobile){
-            min-width:1rem;
+            max-width:7em;
             
         }
     }

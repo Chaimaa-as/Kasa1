@@ -28,12 +28,12 @@
             @include util.flex-center();
             object-fit: cover;
             border-radius: 10px;
-            width: 328px;
-            height: 328px;
+            width: 14rem;
+            height: 14rem;
             @media (max-width:util.$breakpoint-mobile){  
                 min-width: 100%;
-                width: 335px;
-                height: 255px;
+                width: 14rem;
+                height: 14rem;
             }
         }
     }

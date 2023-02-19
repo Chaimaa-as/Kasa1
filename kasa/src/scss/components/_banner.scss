@@ -4,7 +4,6 @@
     @include util.flex-center;
     align-items: center;
     border-radius: 1rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/home_cover.png');
     background-position: center;
     background-size: cover;
     height: 223px;
@@ -14,6 +13,7 @@
     inset:0;
     @include util.banner-styling();
     &__hero{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/home_cover.png');
         @media (max-width:util.$breakpoint-mobile){
             padding-left:16px;
             justify-content: flex-start;
@@ -22,7 +22,7 @@
             
             color: util.$secondary-color;
             font-weight: 500;
-            font-size:2.5em;
+            font-size :2em;;
             & br{
                 display:none;
             }
