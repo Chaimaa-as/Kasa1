@@ -11,11 +11,9 @@ const Ratings = ({rating}) => {
             {[...Array(5)].map((_, index) => {
                 const ratingValue = index + 1;
                 return (
-                    <img key={index} src={ratingValue > rating ? redStar : greyStar} alt="" />
+                    <img key={index} src={ratingValue > rating ? redStar : greyStar} alt=''/>
                 )
             })}
-
-            
         </div>
     );
 };

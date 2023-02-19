@@ -4,9 +4,6 @@
     width:100%;
     overflow: hidden;
     margin-bottom: 2rem;
-    @media (max-width:util.$breakpoint-mobile){
-
-    };
     &__title{
         background-color:util.$primary-color;
         color:util.$secondary-color;
@@ -15,35 +12,30 @@
         font-size:18px;
         font-weight:500;
         border-radius: 10px;
-       
-        height:52px;
+        height:2.6rem;
         padding-left:20px;
-        @media screen and (max-width : 550px){
+        @media (max-width:util.$breakpoint-mobile){
             font-size: 13px;
             height: 30px;
             border-radius: 5px;
         };
-
     }
     &__description{
-
         background-color:util.$bg-color-light;
         color:util.$primary-color;
         border-radius: 10px;
         font-size:18px;
         font-weight:400;
         line-height:26px;
-
         position:relative;
         z-index: -1;
         margin-top:-0.3rem;
-
-       
-        height:156px;
+        min-height:15rem;
         
         padding-left:20px;
         padding-right:20px;
         padding-top:20px;
+
         animation:slide-down 1000ms ease-in-out; 
         @media (max-width:util.$breakpoint-mobile){
             font-size: 13px;
@@ -56,7 +48,7 @@
         background-color: util.$bg-color-light;
         border-radius: 10px;
     
-        height:156px;
+        min-height:15rem;
         font-size:18px;
         padding-left:20px;
         padding-right:20px;
@@ -75,8 +67,8 @@
 }
 
 button{
-    height: 36px;
-    width: 36px;
+    height: 1.2rem;
+    width: 1.4rem;
     cursor: pointer;
     border:none;
     background-color: transparent;

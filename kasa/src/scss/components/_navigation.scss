@@ -10,9 +10,9 @@
         font-size: 1.4em;
         font-weight: 500;
         color:util.$primary-color;
-        @media screen and (max-width : 550px){
+        @media (max-width:util.$breakpoint-mobile){
             gap: 10px;
-            font-size:12px;
+            font-size:0.68em;
             text-transform: uppercase;
         }
         & .navbar__tab--active{

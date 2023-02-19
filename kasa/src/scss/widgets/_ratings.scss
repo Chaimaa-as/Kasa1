@@ -1,8 +1,14 @@
+@use '../../scss/util/' as util;
+
 .hostRating{
     display:flex;
+    margin-bottom: 1rem;
+    @media (max-width:util.$breakpoint-mobile){
+        margin-bottom:0;
+    }
     img{
         height: 1.8rem;
-        @media screen and (max-width:550px){
+        @media (max-width:util.$breakpoint-mobile){
             height: 1.4rem;
         }
     }

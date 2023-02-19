@@ -3,7 +3,7 @@
 .banner{
     @include util.flex-center;
     align-items: center;
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/home_cover.png');
     background-position: center;
     background-size: cover;
@@ -14,7 +14,6 @@
     inset:0;
     @include util.banner-styling();
     &__hero{
-        
         @media (max-width:util.$breakpoint-mobile){
             padding-left:16px;
             justify-content: flex-start;
@@ -32,11 +31,9 @@
                 & br{
                     display:initial;
                 }
-                
             }
         }
     }
-
     @media (max-width:util.$breakpoint-mobile){
         margin: 20px auto;
         height: 120px;

@@ -4,7 +4,7 @@ import logo from '../../assets/logo/logo.png';
 const Logo = () => {
     return (
         <a href="/" className="header__logo">
-            <img src={logo}  alt="logo Kasa"/>
+            <img src={logo}  alt='logo'/>
         </a>
     );
 };

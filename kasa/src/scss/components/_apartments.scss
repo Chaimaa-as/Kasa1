@@ -5,38 +5,36 @@
     @media (max-width:util.$breakpoint-mobile){
         min-width: 100%;
     }
-}
-
-.cards{
-
-    isolation: isolate;
-    border-radius: 10px;
-    display:flex;
-    align-items: flex-end;
-    @include util.hover-lift();
-    h2{
-        color:util.$secondary-color;
-        position:absolute;
-        right: 20px;
-        font-weight: 500;
-        width: 90%;
-        padding:1rem;
-        z-index: 1;
-        font-size: 1em;
-    }
-    img{
-        background-size: cover;
-        background-position: center;
-        border-radius:0.2rem;
-        @include util.flex-center();
-        object-fit: cover;
+    .cards{
+        isolation: isolate;
         border-radius: 10px;
-        width: 328px;
-        height: 328px;
-        @media (max-width:util.$breakpoint-mobile){  
-            min-width: 100%;
-            width: 335px;
-            height: 255px;
+        display:flex;
+        align-items: flex-end;
+        @include util.hover-lift();
+        h2{
+            color:util.$secondary-color;
+            position:absolute;
+            right: 20px;
+            font-weight: 500;
+            width: 90%;
+            padding:1rem;
+            z-index: 1;
+            font-size: 1em;
+        }
+        img{
+            background-size: cover;
+            background-position: center;
+            border-radius:0.2rem;
+            @include util.flex-center();
+            object-fit: cover;
+            border-radius: 10px;
+            width: 328px;
+            height: 328px;
+            @media (max-width:util.$breakpoint-mobile){  
+                min-width: 100%;
+                width: 335px;
+                height: 255px;
+            }
         }
     }
 }

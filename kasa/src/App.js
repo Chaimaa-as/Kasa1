@@ -8,6 +8,7 @@ import Error from './components/pages/Error';
 function App() {
   return (
     <>
+    {/* Mise en place de toutes les pages avec le routeur. */}
       <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home/>}/>
