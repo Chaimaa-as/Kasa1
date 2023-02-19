@@ -20,6 +20,7 @@
             border-radius: 5px;
         };
     }
+  
     &__description{
         background-color:util.$bg-color-light;
         color:util.$primary-color;
@@ -36,7 +37,12 @@
         padding-right:20px;
         padding-top:20px;
 
-        animation:slide-down 1000ms ease-in-out; 
+        animation:slide-down 3500ms ease-in-out; 
+        // &_content_hidden{
+        //     visibility: hidden;
+        //     opacity: 0;
+        //     height: 0;
+        // }
         @media (max-width:util.$breakpoint-mobile){
             font-size: 13px;
             line-height:17px;
@@ -58,6 +64,11 @@
         z-index: -1;
         margin-top:-0.3rem;
         animation:slide-down 2s ease; 
+        &_content_hidden{
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+        }
         @media screen and (max-width : 550px){
             font-size: 13px;
             line-height:17px;
@@ -88,3 +99,4 @@ button{
     0%{transform:translateY(-100%)}
     100%{transform:translateY(0%)}
 }
+
