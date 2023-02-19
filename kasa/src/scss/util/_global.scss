@@ -11,3 +11,8 @@ $star-color-full:#FF6060;
 // media queries
 $breakpoint-mobile:550px;
 $breakpoint-tablet:768px;
+
+@keyframes slide-down{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0%)}
+}

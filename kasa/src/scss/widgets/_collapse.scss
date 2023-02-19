@@ -19,9 +19,24 @@
             height: 30px;
             border-radius: 5px;
         };
+        & button{
+            border:2px solid blue;
+            height: 1.2rem;
+            width: 1.4rem;
+            cursor: pointer;
+            border:none;
+            background-color: transparent;
+            background-size: cover;
+            margin-right: 10px;
+            &.collapsePanel__arrow--up{
+                background-image: url('../../assets/imgs/arrow_up.png');
+            }
+            &.collapsePanel__arrow--down{
+                background-image: url('../../assets/imgs/arrow_down.png');
+            }
+        }
     }
-  
-    &__description{
+    .content{
         background-color:util.$bg-color-light;
         color:util.$primary-color;
         border-radius: 10px;
@@ -32,71 +47,14 @@
         z-index: -1;
         margin-top:-0.3rem;
         min-height:15rem;
-        
         padding-left:20px;
         padding-right:20px;
         padding-top:20px;
-
-        animation:slide-down 3500ms ease-in-out; 
-        // &_content_hidden{
-        //     visibility: hidden;
-        //     opacity: 0;
-        //     height: 0;
-        // }
+        animation:slide-down 350ms ease-in-out; 
         @media (max-width:util.$breakpoint-mobile){
             font-size: 13px;
             line-height:17px;
             height:143px;
         };
     }
-    &__equipment{
-        color:util.$primary-color;
-        background-color: util.$bg-color-light;
-        border-radius: 10px;
-    
-        min-height:15rem;
-        font-size:18px;
-        padding-left:20px;
-        padding-right:20px;
-        padding-top:20px;
-        line-height:26px;
-        position:relative;
-        z-index: -1;
-        margin-top:-0.3rem;
-        animation:slide-down 2s ease; 
-        &_content_hidden{
-            visibility: hidden;
-            opacity: 0;
-            height: 0;
-        }
-        @media screen and (max-width : 550px){
-            font-size: 13px;
-            line-height:17px;
-            height:143px;
-        };
-    }
 }
-
-button{
-    height: 1.2rem;
-    width: 1.4rem;
-    cursor: pointer;
-    border:none;
-    background-color: transparent;
-    background-size: cover;
-    margin-right: 10px;
-
-    &.collapsePanel__arrow--up{
-        background-image: url('../../assets/imgs/arrow_up.png');
-    }
-    &.collapsePanel__arrow--down{
-        background-image: url('../../assets/imgs/arrow_down.png');
-    }
-}
-
-
-@keyframes slide-down{
-    0%{transform:translateY(-100%)}
-    100%{transform:translateY(0%)}
-}
-
