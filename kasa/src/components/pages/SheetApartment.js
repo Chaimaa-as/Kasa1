@@ -12,6 +12,8 @@ import Ratings from '../widgets/Ratings';
 import Host from '../widgets/Host';
 
 const SheetApartment = () => {
+        // Sur cette fiche logement, récupérer l'identifiant mis en paramètre dans l'URL.
+        // Grâce à celui-ci, il est possible de trouver le logement avec l'aide de la fonction "find".
     const {id} = useParams()
     const apartment= ApartmentsList.find((item) => item.id === id)
     return (
