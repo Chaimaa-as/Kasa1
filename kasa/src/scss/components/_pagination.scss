@@ -2,8 +2,6 @@
 
 .paginationBar{
     width:100%;
-    // display: flex;
-    // justify-content: center;
     @include util.flex-center();
     gap: 1em;
     margin-bottom: 2em;

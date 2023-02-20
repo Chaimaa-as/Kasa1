@@ -68,7 +68,6 @@
     $right:0,
     ){
     position:relative;
-
     &::#{$loc}{
         content:$content;
         position:$pos;
