@@ -1,78 +1,37 @@
-// Ce code est un composant React fonctionnel nommé "Collapse".
 // Il représente un panneau déroulant qui peut afficher du texte ou une liste d'éléments
-// en fonction des propriétés passées. Voici une explication détaillée de chaque partie du code :
+// en fonction des propriétés passées.
 
-// 1. Importation des modules nécessaires :
-// ```javascript
-// import React ,{ useState }from 'react';
-// ```
-// On importe React et l'hook "useState" du module 'react'.
+// Import des modules nécessaires : React et l'hook "useState" du module 'react'.
 import React, { useState } from "react";
 
-// 2. Déclaration du composant "Collapse" :
-// ```javascript
-// const Collapse = (props) => {
-// ```
-// "Collapse" est un composant fonctionnel qui accepte les propriétés (props) passées
-// par le composant parent.
+// Déclaration du composant "Collapse" : composant fonctionnel qui accepte les propriétés (props) passées par le composant parent.
 const Collapse = (props) => {
-  // 3. Utilisation de l'hook useState :
-  // ```javascript
-  // const [isVisible,setIsVisible]=useState(false)
-  // ```
-  // On utilise l'hook "useState" pour créer une variable d'état nommée "isVisible"
-  // et sa fonction de mise à jour "setIsVisible". La valeur initiale de "isVisible" est "false".
-  const [isVisible, setIsVisible] = useState(false);
+  // On utilise l'hook "useState" pour créer une variable d'état nommée "isVisible" et sa fonction de mise à jour "setIsVisible".
+  const [isVisible, setIsVisible] = useState(false); // La valeur initiale de "isVisible" est "false".
 
-  // 4. Structure du composant :
   // Le composant retourne une structure JSX qui contient le panneau déroulant et son contenu.
   return (
     <div className="collapsePanel">
       <div className="collapsePanel__title">
         {props.title}
-        {/* // 5. Bouton pour afficher/masquer le contenu :
-        // ```javascript
-        // <button
-        //     className={isVisible?
-        //         'collapsePanel__arrow--up active':'collapsePanel__arrow--down active'}
-        //         onClick={()=>setIsVisible(!isVisible)}>
-        // </button>
-        // ```
-        // Ce bouton permet de basculer l'affichage du contenu du panneau. Si "isVisible" est vrai,
-        // il affiche une flèche vers le haut et si "isVisible" est faux, il affiche une flèche vers le bas.
-        // Le gestionnaire d'événements "onClick" bascule la valeur de "isVisible" entre vrai et faux. */}
+        {/* // Bouton pour afficher/masquer le contenu : Ce bouton permet de basculer l'affichage du contenu du panneau. */}
+        {/* //  Si "isVisible" est vrai, il affiche une flèche vers le haut et si "isVisible" est faux, il affiche une flèche vers le bas. */}
         <button
           className={
             isVisible
               ? "collapsePanel__arrow--up active"
               : "collapsePanel__arrow--down active"
           }
+          // Le gestionnaire d'événements "onClick" bascule la valeur de "isVisible" entre vrai et faux.
           onClick={() => setIsVisible(!isVisible)}
         ></button>
       </div>
 
-      {/* // 6. Affichage du contenu :
-      // ```javascript
-      // {
-      //     isVisible?
-      //         props.text instanceof Array?
-      //         <ul className='collapsePanel__equipment content' >
-      //             {
-      //                 props.text.map((text,index)=>(
-      //                     <li key={index}>{text}</li>
-      //                     ))
-      //                 }
-      //             </ul>
-      //         :
-      //         <div className='collapsePanel__description content'>{props.text}</div>
-      //     :
-      //     <></>
-      // }
-      // ```
-      // Cette partie du code vérifie si "isVisible" est vrai. Si c'est le cas,
-      // il vérifie si "props.text" est une instance de "Array". Si "props.text" est une instance
-      // de "Array", il crée une liste non ordonnée (ul) avec les éléments du tableau.
-      // Sinon, il affiche simplement le texte dans une div. Si "isVisible" est faux, il n'affiche rien. */}
+      {/* Affichage du contenu : Cette partie du code vérifie si "isVisible" est vrai. 
+      Si c'est le cas, il vérifie si "props.text" est une instance de "Array". 
+          Si "props.text" est une instance de "Array", il crée une liste non ordonnée (ul) avec les éléments du tableau.
+          Sinon, il affiche simplement le texte dans une div. 
+      Si "isVisible" est faux, il n'affiche rien. */}
       {isVisible ? (
         props.text instanceof Array ? (
           <ul className="collapsePanel__equipment content">
